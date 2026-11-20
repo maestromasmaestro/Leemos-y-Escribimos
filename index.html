@@ -150,6 +150,8 @@ button:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
 .puesto button.mal{border-color:var(--mal);background:#FCE9E7}
 .puesto button.falta{box-shadow:0 0 0 4px var(--pista)}
 /* junto */
+.colpreg{margin:0 0 2px;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+.frase.sola{opacity:1;border-style:dashed;background:var(--pistas)}
 .junto2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .col{display:flex;flex-direction:column;gap:10px}
 .frase{font-size:clamp(22px,3.4vw,30px);font-weight:700;text-align:left;padding:10px 16px;border:3px solid var(--borde);background:#fff;border-radius:14px}
@@ -167,6 +169,58 @@ button:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
   .letragrande{width:90px;height:100px;font-size:58px}
   .casillero{width:48px;height:48px}
 }
+.carta.muchos{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:10px;align-items:center;justify-items:center}
+.carta.muchos .dibujo:nth-child(3){grid-column:1/3;width:50%}
+.carta.grande{width:200px;height:200px}
+.oracion.linea{min-height:64px;border-bottom:3px solid var(--borde);padding-bottom:6px}
+.oracion.linea.bien{border-bottom-color:var(--bien)}
+.oracion .w.puesta{border:0;background:var(--accs);border-radius:10px;font:inherit;font-weight:700;padding:0 8px;line-height:1.3}
+.frase.usada[disabled]{opacity:.25}
+.trazbarra{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip.ancho{font-size:18px;padding:0 14px}
+.trazcaja{display:flex;justify-content:center}
+.trazsvg{width:min(100%,520px);height:auto;background:#fff;border:2px solid var(--borde);border-radius:18px}
+.trazsvg .lin{stroke:#9AA3B2;stroke-width:4}
+.trazsvg .lin.punteada{stroke-dasharray:12 14}
+.trazsvg .guia{fill:none;stroke:#8A909B;stroke-width:22;stroke-linecap:round;stroke-dasharray:0 50}
+.trazsvg .oculta{fill:none;stroke:none}
+.trazsvg .punto{fill:#8A909B}
+.trazsvg .inicio{fill:#E8572A}
+.trazsvg .tinta{fill:none;stroke:#2B7BD3;stroke-width:24;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.trazsvg .lapiz{fill:#2B7BD3;stroke:#fff;stroke-width:6}
+.trazsvg .cand{fill:#E8572A;stroke:#fff;stroke-width:6;cursor:pointer}
+.trazsvg .cand.mal{fill:#C9CFDA}
+.hoja{display:flex;flex-direction:column;gap:8px}
+.trazsvg.renglon{width:100%;max-width:none}
+.desafio{display:flex;flex-direction:column;align-items:center;gap:12px}
+.reloj{font-size:clamp(40px,7vw,64px);font-weight:700;margin:0;font-variant-numeric:tabular-nums}
+.record{text-align:center;color:var(--tinta2);font-weight:700;margin:0}
+.revision{display:flex;flex-direction:column;gap:8px;width:min(100%,560px)}
+.chequeo{text-align:left;font:inherit;font-size:18px;font-weight:700;padding:10px 14px 10px 46px;border:2px solid var(--borde);border-radius:12px;background:#fff;position:relative;min-height:44px}
+.chequeo::before{content:"";position:absolute;left:14px;top:50%;width:20px;height:20px;margin-top:-10px;border:2px solid var(--borde);border-radius:5px;background:#fff}
+.chequeo[aria-pressed="true"]{border-color:var(--bien);background:var(--biens)}
+.chequeo[aria-pressed="true"]::before{background:var(--bien);border-color:var(--bien)}
+.escena{position:relative;width:min(100%,460px);aspect-ratio:7/5;margin:0 auto;border:2px solid var(--borde);border-radius:18px;overflow:hidden;background:linear-gradient(#fff 0 90%,#EEF1F6 90%)}
+.escena img{position:absolute;display:block;object-fit:contain;max-width:none}
+.escena .zz{position:absolute;white-space:nowrap;z-index:4;font-weight:700;color:var(--tinta2);font-size:clamp(15px,2.6vw,22px);letter-spacing:.05em}
+.escena.cielo{background:linear-gradient(#DDF0FC,#F4FAFE)}
+.escena .agua{position:absolute;left:0;right:0;bottom:0;z-index:2;background:rgba(146,211,245,.88);border-top:3px solid #61B2E4}
+.oracion .falta{border:3px dashed var(--borde);border-radius:12px;padding:2px 12px;color:var(--tinta2);font-size:.62em;font-weight:700;background:#fff}
+.oracion .falta.ahora{border-color:var(--acc);background:var(--accs);color:var(--tinta)}
+.oracion{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 8px;font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.3}
+.oracion .w{padding:0 4px;border-radius:10px}
+.oracion .w.nueva{background:var(--biens)}
+.oracion .junto-punto{display:inline-flex;align-items:center;white-space:nowrap;gap:2px}
+.oracion .w.punto{padding:0}
+.hueco{width:42px;height:46px;border:3px dashed var(--acc);border-radius:10px;background:var(--accs);font-size:28px;font-weight:700;color:var(--tinta);padding:0;line-height:1}
+.opsfila{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.frase.ok{border-color:var(--bien);background:var(--biens)}
+.frase.mal{opacity:.5;text-decoration:line-through;text-decoration-color:var(--mal)}
+.antesahora{display:flex;flex-direction:column;gap:10px}
+.antesahora p{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700;padding:8px 16px;border-radius:14px;background:var(--gris)}
+.antesahora p.ahora{background:var(--biens)}
+.antesahora small{display:block;font-size:14px;color:var(--tinta2);letter-spacing:.06em;text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -181,7 +235,7 @@ button:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
   </header>
   <main id="vista"></main>
   <footer class="pie">
-    Adaptación digital de juegos de las cápsulas de +Alfabetización (Escuela de Maestros, GCBA) para acompañar las guías Leemos y Escribimos de M+M. Antes de cada juego, el/la docente modela la actividad con el grupo, como proponen las cápsulas. Dibujos: <a href="https://openmoji.org" target="_blank" rel="noopener">OpenMoji</a>, licencia CC BY-SA 4.0.
+    Adaptación digital de juegos de las cápsulas de +Alfabetización (Escuela de Maestros, GCBA) y, para frases y oraciones, de propuestas de Yo amo aprender y Yo amo enseñar 1.º y 2.º (GCBA), para acompañar las guías Leemos y Escribimos de M+M. El trazado sigue el modelo de letra de «¡Vamos a leer y a escribir!» (GCBA). Antes de cada juego, el/la docente modela la actividad con el grupo, como proponen las cápsulas. Dibujos: <a href="https://openmoji.org" target="_blank" rel="noopener">OpenMoji</a>, licencia CC BY-SA 4.0.
   </footer>
 </div>
 
@@ -266,11 +320,14 @@ var CATS = {
 };
 var VERDU = ["pera","uva","papa","tomate","banana","lechuga","zanahoria","ajo","coco","pepino","limón","cereza","ananá","frutilla","naranja","durazno","palta","choclo","morrón","berenjena","manzana","sandía"];
 var JUNTO = {
-  2:[["la jirafa","tiene el cuello largo"],["la velita","está en la torta"],["la tortuga","camina lento"],["el águila","vuela alto"],["la hormiga","carga una hoja"],["la foca","nada en el mar"],["el gato","dice miau"],["la vaca","da leche"],["la araña","teje su tela"],["el nene","lava la taza"]],
-  3:[["el perro","mueve la cola"],["la bruja","vuela en su escoba"],["el tren","frena en la estación"],["la tortuga","camina muy lento"],["el pulpo","tiene ocho brazos"],["la princesa","vive en un castillo"],["el grillo","canta de noche"],["el dragón","tira fuego por la boca"],["la abuela","cocina con sus nietos"],["el mono","come bananas en el árbol"],["la mosca","vuela sobre la fruta"]]
+  2:[["la jirafa","come hojas"],["la vaca","da leche"],["el gato","dice miau"],["la foca","nada en el mar"],["la araña","teje su tela"],["el nene","lava la taza"],["la abeja","hace miel"],["la gallina","pone huevos"],["el bebé","toma la mamadera"],["la luna","sale de noche"]],
+  3:[["el perro","mueve la cola"],["la bruja","vuela en su escoba"],["el tren","frena en la estación"],["la tortuga","camina muy lento"],["el pulpo","mueve sus ocho brazos"],["la princesa","baila en el castillo"],["el grillo","canta de noche"],["el dragón","tira fuego por la boca"],["la abuela","cocina con sus nietos"],["el mono","come bananas en el árbol"],["la mosca","vuela sobre la fruta"]]
 };
-/* pares que podrían cruzarse (las dos vuelan, las dos nadan, los dos viven en un castillo): nunca van en la misma ronda */
-var NO_JUNTOS = [["la bruja","la mosca"],["la tortuga","la foca"],["la princesa","el dragón"]];
+/* grupos que podrían cruzarse (por ejemplo, las dos vuelan, o una persona puede hacer lo del otro): nunca van en la misma ronda */
+var NO_JUNTOS = [["la luna","el gato"],["el nene","el bebé"],["la jirafa","la vaca"],
+  ["la bruja","la mosca","el dragón"],["la bruja","la princesa","la abuela","el grillo"],["la tortuga","el perro"],["el pulpo","el perro"]];
+/* frases que quedan sin pareja (como «Los monitos» en Yo amo enseñar 1.º): están en plural y no concuerdan con ninguna parte de la derecha */
+var JUNTO_SOLAS = {2:["los monitos","las nenas","los gatitos","las ovejas"], 3:["las brujas","los grillos","los trenes","las cabras"]};
 
 /* ================= utilidades ================= */
 var nivel = 1;
@@ -797,32 +854,677 @@ function junto(){
     if(r.length<porRonda) break;
     rondas.push(r);
   }
+  var solas = mezclar(JUNTO_SOLAS[nivel]);
   var R = rondas.length, n = 0;
-  var p = pantalla("¡Junto lo que va junto!","Leemos las partes. Tocamos una de la izquierda y la que va con ella a la derecha, para armar una oración que tenga sentido.", R);
+  var p = pantalla("¡Junto lo que va junto!","Leemos las partes. Unimos quién con qué hace para armar oraciones que tengan sentido. ¡Ojo: una parte queda sola!", R);
   ronda();
   function ronda(){
     if(n>=R){ terminar(p,"Armaste todas las oraciones.",junto); return; }
-    var prs = rondas[n], izq = mezclar(prs), der = mezclar(prs), sel = null, hechas = 0;
+    var prs = rondas[n], sola = solas[n % solas.length], izq = mezclar(prs.concat([[sola,null]])), der = mezclar(prs), sel = null, hechas = 0;
     p.mesa.innerHTML = "";
-    var av = aviso(); avisar(av,"Tocá una parte de la izquierda.");
-    var ci = el("div",{class:"col"}), cd = el("div",{class:"col"}), armadas = el("div",{class:"armadas"});
+    var av = aviso(); avisar(av,"Tocá una parte de «¿Quién?».");
+    var ci = el("div",{class:"col"},[el("h3",{class:"colpreg",text:"¿Quién?"})]), cd = el("div",{class:"col"},[el("h3",{class:"colpreg",text:"¿Qué hace?"})]), armadas = el("div",{class:"armadas"});
     var bi = izq.map(function(pr){ var b = el("button",{class:"frase",type:"button",text:pr[0]});
-      b.addEventListener("click", function(){ if(b.classList.contains("usada")) return; sel = pr; bi.forEach(function(x){ x.classList.toggle("sel",x===b); }); avisar(av,"Ahora tocá la parte de la derecha que va con «"+pr[0]+"»."); });
+      b.addEventListener("click", function(){ if(b.classList.contains("usada")) return; sel = pr; bi.forEach(function(x){ x.classList.toggle("sel",x===b); }); avisar(av,"¿Qué hace "+pr[0]+"? Tocá la parte de «¿Qué hace?» que va con «"+pr[0]+"»."); });
       ci.appendChild(b); return b; });
     der.forEach(function(pr){ var b = el("button",{class:"frase",type:"button",text:pr[1]});
       b.addEventListener("click", function(){
         if(b.classList.contains("usada")) return;
-        if(!sel){ avisar(av,"Primero tocá una parte de la izquierda.","pista"); return; }
+        if(!sel){ avisar(av,"Primero tocá una parte de «¿Quién?».","pista"); return; }
         if(sel===pr){
           b.classList.add("usada"); bi.forEach(function(x){ if(x.textContent===pr[0]){ x.classList.add("usada"); x.classList.remove("sel"); } });
           armadas.appendChild(el("p",{text:mayus(pr[0])+" "+pr[1]+"."})); sel = null; hechas++;
-          if(hechas===prs.length){ n++; p.prog(n); avisar(av,"¡Muy bien! Leé las oraciones que armaste: empiezan con mayúscula y terminan con punto.","bien"); p.mesa.appendChild(el("div",{class:"acciones"},[boton("Siguiente","prim grande",ronda)])); }
+          if(hechas===prs.length){
+            n++; p.prog(n);
+            bi.forEach(function(x){ if(x.textContent===sola){ x.classList.add("sola"); x.classList.remove("sel"); } });
+            avisar(av,"¡Muy bien! «"+mayus(sola)+"» quedó sola: dice quién, pero no qué hace. Es una frase, no una oración. Leé las oraciones que armaste: empiezan con mayúscula y terminan con punto.","bien");
+            p.mesa.appendChild(el("div",{class:"acciones"},[boton("Siguiente","prim grande",ronda)]));
+          }
           else avisar(av,"¡Bien! Seguí con otra.","bien");
+        } else if(sel[1]===null){
+          sacudir(b); avisar(av,"Leé las dos partes juntas: «"+sel[0]+" "+pr[1]+"». ¿Suena bien? Fijate si «"+sel[0]+"» es uno o son muchos.","pista");
         } else { sacudir(b); avisar(av,"Leé las dos partes juntas: «"+sel[0]+" "+pr[1]+"». ¿Tiene sentido?","pista"); }
       });
       cd.appendChild(b); });
     p.mesa.appendChild(av); p.mesa.appendChild(el("div",{class:"junto2"},[ci, cd])); p.mesa.appendChild(armadas);
   }
+}
+
+/* ================= 12. Engordamos la oración ================= */
+/* Basado en Yo amo aprender 2.º: completar oraciones (p. 13), armar oraciones con ¿quién? (p. 76)
+   y revisar agregando lo que falta (p. 78). Palabras con grupos consonánticos de N3. */
+var IMG_OR = {"bruja": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22hair%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23D0CFCE%22%20d%3D%22M41.4163%2C13.561c-0.0928-0.1-2.4082-2.6547-7.2432-2.6547c-6.2%2C0-11.4413%2C3.3818-12.743%2C8.226%20c-0.534%2C2.0122%2C0.2752%2C4.1001%2C0.4355%2C6.1758c0.2039%2C2.019-0.0563%2C4.0578-0.7607%2C5.9609c-0.2481%2C0.7561-0.6269%2C1.4627-1.1192%2C2.0879%20c-3.7725%2C4.42-0.9237%2C14.1072-1.1159%2C13.8144c1.1226%2C1.0189%2C1.288%2C2.125%2C2.5821%2C2.9149c1.5566-1.1839%2C3.4138-1.908%2C5.361-2.09%20c6.209%2C5.0127%2C12.4951%2C5.0127%2C18.7%2C0c1.5145%2C0.1121%2C2.9697%2C0.6354%2C4.2087%2C1.5136c1.0534-0.6931%2C2.0475-1.4724%2C2.972-2.33%20c1.1884-0.7148%2C4.6164-8.3882%2C1.883-13.1314c-0.4386-0.8534-0.8251-1.7326-1.1573-2.6328%20c-0.5702-1.1775-1.0541-2.3948-1.4479-3.6424c-0.6-2.0685-0.1322-2.4675-0.6672-3.7278c-0.5729-1.2495-3.0276-2.1732-4.2363-2.8278%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22skin%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FCEA2B%22%20d%3D%22M25.9065%2C25.7998C25.3022%2C27.3152%2C25%2C28.9565%2C25%2C30.9c0%2C8%2C5%2C14%2C11%2C14s11-6%2C11-14%20c0-1.9435-0.3022-3.5848-0.9065-5.1002%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23A77BD0%22%20d%3D%22M17%2C60.949v-4c0-4.9941%2C5.0078-9%2C10-9c6%2C5%2C12%2C5%2C18%2C0c4.9941%2C0%2C10%2C4.0059%2C10%2C9v4%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%236E3F99%22%20d%3D%22M45.6624%2C60.949v-4.0122c-0.1404-2.631-1.5943-5.2619-3.6479-6.9125%20c0.9952-0.5542%2C1.9904-1.246%2C2.9855-2.0753c4.9941%2C0%2C10%2C4.0059%2C10%2C9v4%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23A77BD0%22%20d%3D%22M14%2C25.685h44l-11.851-4.85c-0.2182-4.2512-2.23-11.3493-10.9108-11.5669%20c-12.97%2C0-15.2347%2C13.47-15.2347%2C13.47%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%236E3F99%22%20d%3D%22M20.0701%2C31.9327c-0.72%2C1.87-1.66%2C3.68-2.28%2C5.55l-1.15-4.23c-0.1404-0.6378-0.0593-1.3045%2C0.23-1.89%20l1.59-5.68h2.29C21.0011%2C27.7906%2C20.7685%2C29.928%2C20.0701%2C31.9327z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%236E3F99%22%20d%3D%22M53.3683%2C40.539c-2.5437-1.0747-3.7346-4.008-2.6599-6.5517s4.008-3.7346%2C6.5517-2.6599%20s3.7346%2C4.008%2C2.6599%2C6.5517c-0.4479%2C1.0601-1.2477%2C1.9332-2.2646%2C2.4721%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23A77BD0%22%20d%3D%22M55.3145%2C32.4717c-0.8786%2C0.137-1.6948%2C0.5381-2.34%2C1.15c1.5407-0.3467%2C3.1393-0.3467%2C4.68%2C0%20C57.0093%2C33.0098%2C56.1931%2C32.6087%2C55.3145%2C32.4717z%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22%23A57939%22%20points%3D%2257.314%2C61%2057.314%2C40.539%2053.314%2C40.539%2053.314%2C61%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M53.3683%2C40.59%20c-2.5437-1.0747-3.7346-4.008-2.6599-6.5517s4.008-3.7346%2C6.5517-2.6599s3.7346%2C4.008%2C2.6599%2C6.5517%20c-0.4479%2C1.0601-1.2477%2C1.9332-2.2646%2C2.4721%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20points%3D%2257.314%2C60.051%2057.314%2C40.605%2053.314%2C40.605%2053.314%2C60.051%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M17%2C60v-3%20c0-4.9941%2C5.0078-9%2C10-9c6%2C5%2C12%2C5%2C18%2C0c3.2121%2C0%2C6.4292%2C1.6572%2C8.316%2C4.1687%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M19.0858%2C25.8L16.9%2C31.4%20c-0.3115%2C0.5831-0.3832%2C1.2648-0.2%2C1.9l1.425%2C5.4454%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M26.9%2C17.5%20c-0.4245%2C1.0967-0.7263%2C2.2369-0.9%2C3.4l0%2C0l-12%2C4.9h44l-11.9-4.9c-0.2-4.3-2.2-11.3-10.9-11.6C22.2%2C9.3%2C20%2C22.8%2C20%2C22.8%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M50.7171%2C25.8%20c0.1484%2C1.2016%2C0.3347%2C2.1097%2C0.587%2C2.9501%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M19.6646%2C46.6%20c-3.7-5.9-0.6-10.1%2C1.2-14.7c0.8867-2.3275%2C0.7292-4.0715%2C0.6678-6.1%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M42%2C29.9c0%2C1.1-0.9%2C2-2%2C2s-2-0.9-2-2s0.9-2%2C2-2S42%2C28.8%2C42%2C29.9%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M34%2C29.9c0%2C1.1-0.9%2C2-2%2C2c-1.1%2C0-2-0.9-2-2s0.9-2%2C2-2C33.1%2C27.9%2C34%2C28.8%2C34%2C29.9%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M25.9065%2C25.7998%20C25.3022%2C27.3152%2C25%2C28.9565%2C25%2C30.9c0%2C8%2C5%2C14%2C11%2C14s11-6%2C11-14c0-1.9435-0.3022-3.5848-0.9065-5.1002%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M33%2C38.1c1.9%2C1%2C4.1%2C1%2C6%2C0%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "princesa": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FFA7C0%22%20d%3D%22M50.0576%2C58.8395c0-4.0115%2C3.8632-8.1267%2C3.8632-8.1267l-2.1081-3.3567%20c-4.4249-0.4802-6.0588%2C8.7658-6.0588%2C8.7658c-3.6822-4.6369-9.8914%2C0.17-9.8914%2C0.17s-6.3702-4.8069-10.0525-0.17%20c0%2C0-1.6339-9.246-6.0587-8.7658l-2.1081%2C3.3567c0%2C0%2C3.8632%2C4.1152%2C3.8632%2C8.1267H50.0576z%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23FCEA2B%22%20points%3D%2231.4401%2C17.5603%2031.4417%2C7.817%2034.557%2C10.4685%2035.9721%2C6.9227%2037.4406%2C10.3322%2040.2849%2C7.817%2040.2849%2C17.5603%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22hair%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F4AA41%22%20d%3D%22M44.6616%2C14.1806c-1.3679-0.8802-2.7359-1.5522-4.1038-2.0161l-0.2729%2C5.3958h-8.6702l0.0319-5.4733%20c-1.4461%2C0.4652-2.8922%2C1.1631-4.3383%2C2.0936c-15.3119%2C15.2765%2C6.6157%2C9.8224%2C8.6766%2C4.5452%20C38.0458%2C24.003%2C59.9735%2C29.4571%2C44.6616%2C14.1806z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F4AA41%22%20d%3D%22M23.8132%2C44.829c0.9169-0.246%2C1.9445-0.389%2C3.1118-0.389c3.17%2C2.1047%2C5.8895%2C3.5601%2C8.9375%2C3.574%20c3.048-0.0139%2C5.7675-1.4693%2C8.9375-3.574c1.2405%2C0%2C2.3238%2C0.1609%2C3.2828%2C0.4369c0.7167-0.5253%2C1.4333-1.0814%2C2.15-1.7%20c3.1968-3.5804%2C0.3021-14.8257-0.9258-19.0057c-8.8832-8.316-17.7664-8.3165-26.6496%2C0c-1.2279%2C4.18-4.1231%2C15.4253-0.9258%2C19.0057%20C22.4254%2C43.7758%2C23.1193%2C44.3176%2C23.8132%2C44.829z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22skin%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FCEA2B%22%20d%3D%22M17.6998%2C50.7747c-1.3542%2C3.8632-0.7748%2C8.0626-0.7748%2C8.0626h4.5813%20C21.5049%2C55.1042%2C18.163%2C51.2861%2C17.6998%2C50.7747z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FCEA2B%22%20d%3D%22M44.8%2C44.44c-3.17%2C2.1047-5.8895%2C3.5601-8.9375%2C3.574c-3.048-0.0139-5.7675-1.4693-8.9375-3.574%20c-5.3155%2C0-7.8812%2C2.8254-9.0933%2C5.9727l1.9196-3.0566c4.4248-0.4802%2C6.0587%2C8.7658%2C6.0587%2C8.7658%20c3.6823-4.6369%2C10.0525%2C0.17%2C10.0525%2C0.17s6.2092-4.8069%2C9.8914-0.17c0%2C0%2C1.6339-9.246%2C6.0588-8.7658l2.1081%2C3.3567%20c0%2C0-3.8616%2C4.1138-3.863%2C8.1245H54.8C54.8%2C58.8373%2C56.8%2C44.44%2C44.8%2C44.44z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FCEA2B%22%20d%3D%22M36.0133%2C19.3798c0%2C0%2C3.5238%2C5.175%2C11.1%2C5.7564c0.1564%2C0.9382%2C0.2386%2C1.9103%2C0.2386%2C2.9065%20c0%2C7.8277-5.0765%2C14.1733-11.3386%2C14.1733s-11.3386-6.3456-11.3386-14.1733c0-1.0109%2C0.0847-1.9971%2C0.2456-2.9481%20C31.9851%2C23.8263%2C36.0133%2C19.3798%2C36.0133%2C19.3798z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22skin-shadow%22/%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M41.9851%2C26.9809c0%2C1.1045-0.8965%2C2-2%2C2s-2-0.8955-2-2c0-1.1035%2C0.8965-2%2C2-2S41.9851%2C25.8774%2C41.9851%2C26.9809%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M33.9851%2C26.9809c0%2C1.1045-0.8965%2C2-2%2C2s-2-0.8955-2-2c0-1.1035%2C0.8965-2%2C2-2S33.9851%2C25.8774%2C33.9851%2C26.9809%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M35.9849%2C36.9833c-1.1518%2C0-2.3037-0.2861-3.4472-0.8579c-0.4942-0.2471-0.6944-0.8477-0.4473-1.3418%20c0.2466-0.4937%2C0.8462-0.6943%2C1.3418-0.4473c1.7178%2C0.8594%2C3.3877%2C0.8594%2C5.1055%2C0c0.4946-0.247%2C1.0947-0.0464%2C1.3418%2C0.4473%20c0.247%2C0.4941%2C0.0468%2C1.0947-0.4473%2C1.3418C38.2886%2C36.6972%2C37.1368%2C36.9833%2C35.9849%2C36.9833z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M24.9671%2C24.9804%20c-0.2096%2C1.0775-0.3208%2C2.2032-0.3208%2C3.3613c0%2C7.8276%2C5.0765%2C14.1732%2C11.3386%2C14.1732c6.2622%2C0%2C11.3386-6.3456%2C11.3386-14.1732%20c0-1.1582-0.1111-2.2839-0.3208-3.3614%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M16.925%2C57.8337c0%2C0-2-13%2C10-13c3.1919%2C2.1279%2C5.9264%2C3.5984%2C9%2C3.5921H35.8c3.0736%2C0.0063%2C5.8081-1.4642%2C9-3.5921c12%2C0%2C10%2C13%2C10%2C13%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2231.4401%2C17.5603%2031.4417%2C7.817%2034.557%2C10.4685%2035.9721%2C6.9227%2037.4406%2C10.3322%2040.2849%2C7.817%2040.2849%2C17.5603%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M17.6432%2C50.7128c0%2C0%2C3.8632%2C3.1152%2C3.8632%2C7.1267%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M51.8127%2C47.3561c-4.4249-0.4802-6.0588%2C8.7658-6.0588%2C8.7658c-3.6822-4.6369-9.8914%2C0.17-9.8914%2C0.17s-6.3702-4.8069-10.0525-0.17%20c0%2C0-1.6339-9.246-6.0587-8.7658%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M53.9208%2C50.7128c0%2C0-3.8632%2C3.1252-3.8632%2C7.1367%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M44.2693%2C15.055c14.5692%2C14.5357-6.295%2C9.3461-8.256%2C4.3248c-1.9611%2C5.0213-22.8252%2C10.2109-8.2561-4.3248%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M23.0563%2C23.8263c-1.1906%2C4.0541-3.9987%2C14.9608-0.898%2C18.4335%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M48.9037%2C23.8263c1.1906%2C4.0541%2C3.9986%2C14.9608%2C0.8979%2C18.4335%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "castillo": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Crect%20x%3D%2230%22%20y%3D%2227%22%20width%3D%2212%22%20height%3D%2214%22%20fill%3D%22%239B9B9A%22%20stroke%3D%22none%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23D0CFCE%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2252%2C55%2020%2C55%2020%2C41%2020%2C39%2020%2C39%2027%2C39%2027%2C41%2032%2C41%2031.9998%2C39%2040%2C39%2040%2C41%2045%2C41%2045%2C39%2052%2C39%2052%2C41%2052%2C39%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2210%22%20y%3D%2232%22%20width%3D%2210%22%20height%3D%2223%22%20fill%3D%22%23D0CFCE%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2252%22%20y%3D%2232%22%20width%3D%2210%22%20height%3D%2223%22%20fill%3D%22%23D0CFCE%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2226%22%20width%3D%2214%22%20height%3D%226%22%20fill%3D%22%23D0CFCE%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2229.5%22%20y%3D%2222%22%20width%3D%2213%22%20height%3D%226%22%20fill%3D%22%23D0CFCE%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2250%22%20y%3D%2226%22%20width%3D%2214%22%20height%3D%226%22%20fill%3D%22%23D0CFCE%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23EA5A47%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2236%2C12%2031.5%2C22%2040.5%2C22%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23EA5A47%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2215%2C16%209.5%2C26%2020.5%2C26%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23EA5A47%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2257%2C16%2051.5%2C26%2062.5%2C26%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23A57939%22%20stroke%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M40.5%2C55h-9v-6c0-1.6569%2C1.3431-3%2C3-3h3c1.6569%2C0%2C3%2C1.3431%2C3%2C3V55z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22hair%22/%3E%0A%20%20%3Cg%20id%3D%22skin%22/%3E%0A%20%20%3Cg%20id%3D%22skin-shadow%22/%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2231%2C35%2031%2C28%2041%2C28%2041%2C34.9999%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M37%2C35h-2v-3c0-0.5523%2C0.4477-1%2C1-1l0%2C0%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2252%2C55%2020%2C55%2020%2C41%2020%2C39%2020%2C39%2027%2C39%2027%2C41%2032%2C41%2031.9998%2C39%2040%2C39%2040%2C41%2045%2C41%2045%2C39%2052%2C39%2052%2C41%2052%2C39%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2210%22%20y%3D%2232%22%20width%3D%2210%22%20height%3D%2223%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2252%22%20y%3D%2232%22%20width%3D%2210%22%20height%3D%2223%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2226%22%20width%3D%2214%22%20height%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2229.5%22%20y%3D%2222%22%20width%3D%2213%22%20height%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2250%22%20y%3D%2226%22%20width%3D%2214%22%20height%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2236%2C12%2031.5%2C22%2040.5%2C22%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2215%2C16%209.5%2C26%2020.5%2C26%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2257%2C16%2051.5%2C26%2062.5%2C26%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M40.5%2C55h-9v-6c0-1.6569%2C1.3431-3%2C3-3h3c1.6569%2C0%2C3%2C1.3431%2C3%2C3V55z%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%2236%22%20x2%3D%2236%22%20y1%3D%2246%22%20y2%3D%2255%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M16%2C40h-2v-3c0-0.5523%2C0.4477-1%2C1-1l0%2C0%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M58%2C40h-2v-3c0-0.5523%2C0.4477-1%2C1-1l0%2C0%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "grillo": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%235C9E31%22%20stroke%3D%22none%22%20d%3D%22M58%2C46h3c0%2C0-5%2C10-23%2C9c0%2C0-7%2C0-15-8c0%2C0%2C1%2C7-4%2C5s-6-5-4-12l25%2C4%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23B1CC33%22%20stroke%3D%22none%22%20points%3D%2239%2C50%2056%2C35%2054%2C46%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22hair%22/%3E%0A%20%20%3Cg%20id%3D%22skin%22/%3E%0A%20%20%3Cg%20id%3D%22skin-shadow%22/%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%228%2C36%2014%2C40%2011%2C34%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2227.1439%2C51.2523%2024%2C59%2021%2C59%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2232.8504%2C54.1235%2031%2C59%2035%2C59%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M58%2C46h3c0%2C0-5%2C10-23%2C9c0%2C0-7%2C0-15-8c0%2C0%2C1%2C7-4%2C5s-6-5-4-12l25%2C4%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2256%2C59%2052%2C59%2057%2C34%2039%2C49%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "estación": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2217.0034%2020.119%2016.8362%2051.3866%2053.4544%2051.721%2053.7749%2018.7917%2017.0034%2020.119%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22%23d0cfce%22%20points%3D%2253.7749%2042.5833%2053.7749%2018.7917%2060.7813%2018.7917%2060.7813%2042.5833%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22%23d0cfce%22%20points%3D%2234.4375%2062.5189%203.7813%2062.5189%203.7813%2050.9289%2034.8125%2050.9289%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%233f3f3f%22%20d%3D%22m35.0781%2C22.5h-18c-.5522%2C0-1%2C.4477-1%2C1v10c0%2C.5522.4478%2C1%2C1%2C1h18c.5523%2C0%2C1-.4478%2C1-1v-10c0-.5523-.4477-1-1-1Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%239b9b9a%22%20d%3D%22m31.7449%2C25.5h-11.3335c-.5523%2C0-1%2C.4477-1%2C1v4c0%2C.5522.4477%2C1%2C1%2C1h11.3335c.5522%2C0%2C1-.4478%2C1-1v-4c0-.5523-.4478-1-1-1Z%22/%3E%0A%20%20%20%20%3Crect%20x%3D%223.7813%22%20y%3D%229.1667%22%20width%3D%2264.4687%22%20height%3D%229.625%22%20fill%3D%22%23d0cfce%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22%23d0cfce%22%20points%3D%2214.8125%2051.9114%2010.7813%2051.9114%2010.7813%2018.7917%2015.5874%2018.7917%2015.5874%2051.9114%2014.8125%2051.9114%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d0cfce%22%20d%3D%22m55.2813%2C38.7689s-13.6875-1-23.75%2C5.625-16.25%2C11.625-16.25%2C11.625c0%2C0-1.7671%2C1.7819-1.875%2C3.875-.1563%2C3.0312%2C6.875%2C3.9375%2C6.875%2C3.9375l15.4187%2C1.0884c.3458.0244.6923.0366%2C1.0389.0366h32.4798s-.1874-26.1875%2C0-26.1875c0%2C0-13.9374%2C0-13.9374%2C0Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%233f3f3f%22%20d%3D%22m30.4063%2C50.1439l3.0313%2C3.0312h32.7187v-6.9687c0-.5523-.4478-1-1-1h-17s-8.5625-.25-18.125%2C4.125%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23ea5a47%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m17.7813%2C59.5189s12.375-2.125%2C47.375-1%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20points%3D%2254.875%2034.9167%2054.875%2018.7917%2059.6812%2018.7917%2059.6812%2034.9167%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2257.934%22%20cy%3D%2266.0208%22%20r%3D%222%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20points%3D%227.4375%2061.5364%203.7813%2061.5364%203.7813%2051.9114%2014.8125%2051.9114%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m35.0781%2C22.5h-18c-.5522%2C0-1%2C.4477-1%2C1v10c0%2C.5522.4478%2C1%2C1%2C1h18c.5523%2C0%2C1-.4478%2C1-1v-10c0-.5523-.4477-1-1-1Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m31.7449%2C25.5h-11.3335c-.5523%2C0-1%2C.4477-1%2C1v4c0%2C.5522.4477%2C1%2C1%2C1h11.3335c.5522%2C0%2C1-.4478%2C1-1v-4c0-.5523-.4478-1-1-1Z%22/%3E%0A%20%20%20%20%3Crect%20x%3D%223.7813%22%20y%3D%229.1667%22%20width%3D%2264.4687%22%20height%3D%229.625%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222.0766%22%20points%3D%2214.8125%2051.9114%2010.7813%2051.9114%2010.7813%2018.7917%2015.5874%2018.7917%2015.5874%2051.9114%2014.8125%2051.9114%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2244.8716%22%20cy%3D%2266.0208%22%20r%3D%222%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%226.0938%22%20x2%3D%2268%22%20y1%3D%2268.0189%22%20y2%3D%2268.0189%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m55.2813%2C38.7689s-13.6875-1-23.75%2C5.625-16.25%2C11.625-16.25%2C11.625c0%2C0-1.7671%2C1.7819-1.875%2C3.875-.1563%2C3.0312%2C6.875%2C3.9375%2C6.875%2C3.9375l15.4187%2C1.0884c.3458.0244.6923.0366%2C1.0389.0366h32.4798s-.1874-26.1875%2C0-26.1875c0%2C0-13.9374%2C0-13.9374%2C0Z%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20points%3D%2230.4063%2050.1439%2033.4376%2053.1751%2065.1563%2053.1751%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "cabra": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23a57939%22%20d%3D%22m14.9052%2C16.5687s-4.0263-2.1683-5.1407-.4195l1.6065%2C2.5221-4.0225%2C3.9723-.7365%2C2.2816.9757%2C1.7853%2C1.8769-.1152c.6259-.0384%2C1.236.2068%2C1.6611.6678h0c.277.3003.4081.7071.3587%2C1.1126l-.4904%2C4.0222s4.5938.25%2C2.7188-6.6493h2.2324l.1963%2C2.1493.6417%2C3.4545s.8915%2C3.8863%2C1.5478%2C3.7955%2C3.1319%2C2.4%2C3.1319%2C2.4l.684%2C3.9778%2C3.161%2C3.4406s3.4359%2C11.6563%2C2.4673%2C14.5658c-.9687%2C2.9096-.7567%2C3.3723-.7567%2C3.3723l2.5692.681%2C2.1608-4.4433-.8899-14.8962s6.9504%2C5.9571%2C15.246%2C1.3046c0%2C0%2C.5321%2C5.4073%2C2.4139%2C6.3462l-1.1489%2C6.8721-1.9903%2C3.5042%2C1.396.9868%2C1.8119-.3503%2C3.0314-6.0352%2C1.1038-10.9629%2C1.178-2.5774%2C5.3749-7.1527s.2703-2.5759-1.3092-4.0424c-.6279-.583-1.7969-1.3117-2.9777-1.9783-2.1882-1.2352-4.6398-1.9293-7.1494-2.0551l-6.7474-.3382c-1.5826-.0793-3.1691-.015-4.7401.1922l-7.3223.9656c-1.0298.1358-2.0438-.3436-2.5924-1.2257l-5.474-8.8013-2.6317-2.125s-2.7959-.5961-3.4259-.2044Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%236a462f%22%20d%3D%22m59.2752%2C36.1811s-1.7636%2C7.4875-2.3125%2C10.3392c-.3333%2C1.7317-.6959%2C3.819-.6959%2C3.819l1.1475%2C1.996-4.25%2C11.6875s-3.8266.5271-4.3891-.7632l3.1059-4.6743.4566-5.5625.4375-7.6875%2C1.1251-2.0016%2C5.3749-7.1526Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%236a462f%22%20d%3D%22m14.5877%2C17.9605l3.3466-3.9634%2C5.2479-.5321%2C4.2805%2C3.7455s-6.75-4.375-9.1317%2C1.4375l-3.7433-.6875Z%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%236a462f%22%20points%3D%2226.4002%2048.5855%2031.0252%2049.273%2031.8377%2057.7105%2029.8416%2063.0633%2026.4002%2063.0633%2028.1502%2058.3355%2026.4002%2048.5855%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%236a462f%22%20points%3D%2252.3377%2053.023%2048.4002%2053.523%2046.9159%2059.5674%2045.3792%2062.273%2045.7934%2063.0633%2048.1502%2063.5855%2050.8997%2059.059%2052.3377%2053.023%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%236a462f%22%20d%3D%22m64.9627%2C26.5021s1.9578%2C10.3429-5.8128%2C10.2131c0%2C0-.0556-3.1065-1.1839-4.5765l2.4679-2.5651s1.7521-2.2515%2C1.8614-2.3229%2C2.6674-.7486%2C2.6674-.7486Z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m10.9522%2C31.3524c2.1772-4.1292-.8258-4.955-.8258-4.955-1.7268.8258-2.7778-.3003-2.7778-.3003-1.8018-1.7267%2C0-3.4535%2C0-3.4535%2C4.0541-2.8529%2C4.0225-3.9723%2C4.0225-3.9723l-1.7276-2.7122s2.4349-2.3246%2C4.9124%2C1.0538c0%2C0%2C5.931-8.4085%2C12.4626-.6006%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m13.9559%2C25.7358s3.9033.4364%2C3.9784-3.7678%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m18.3309%2C17.7091s2.2921.3123%2C3.875%2C3.875c.7891%2C1.7761%2C4.4163%2C7.4998%2C4.8126%2C7.7292%2C0%2C0%2C25.5259-5.6186%2C30.556%2C2.7899%2C0%2C0%2C1.7267.5255%2C2.7778-2.3274%2C1.0511-2.8529%2C3.6037-3.2283%2C3.6037-3.2283%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m46.4012%2C45.3935c-8.9341%2C4.8799-15.5538-1.3532-15.5538-1.3532l.4836%2C8.8965.5%2C6.0223-1.672%2C3.7114c-.1616.3586-.5184.5892-.9117.5892h-1.4643c-.7366%2C0-1.2204-.7694-.9013-1.4333l1.1632-2.9869s-.0504-1.736-.5009-5.4147-2.3274-8.7088-2.3274-8.7088c-4.5046-2.5526-3.7538-7.168-3.7538-7.168-5.7057-4.1514-5.3158-12.316-5.3158-12.316%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m48.678%2C39.1979s-5.0582%2C6.4486-.1595%2C12.6987c0%2C0%2C.1019%2C5.4161-1.8125%2C8.0625l-1.1586%2C1.7482c-.4405.6647.0361%2C1.5524.8336%2C1.5524h1.4454c.2941%2C0%2C.5696-.1269.7608-.3503.9164-1.0706%2C3.4939-4.5506%2C3.4939-9.8253%2C0-5.2399%2C1.0453-9.0438%2C1.0453-9.0438%2C5.0676-4.4483%2C5.2568-7.8591%2C5.2568-7.8591%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m56.0393%2C46.5204s-1.065%2C3.2324%2C1.375%2C5.3345l-4.25%2C11.2083%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "piedra": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d0cfce%22%20d%3D%22M55.785%2C34.99a.9992.9992%2C0%2C0%2C1%2C.1055%2C1.041l-3.8946%2C8.0626a1.0021%2C1.0021%2C0%2C0%2C1-.706.5468L40.492%2C46.7783a1.007%2C1.007%2C0%2C0%2C1-.7939-.1806L16.2137%2C29.02a1.0007%2C1.0007%2C0%2C0%2C1-.1758-1.4316l2.4385-2.9971a.9981.9981%2C0%2C0%2C1%2C.3252-.2627l18.3057-9.2217a1.0147%2C1.0147%2C0%2C0%2C1%2C.6572-.0849l3.8193.8066a.9974.9974%2C0%2C0%2C1%2C.6367.4424l2.6731%2C4.144%2C1.6213%2C2.4905Z%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%233f3f3f%22%20points%3D%2226.692%2056%2046.788%2056%2040.317%2045.819%2016.943%2028.219%2015.814%2033.046%2026.692%2056%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%239b9b9a%22%20points%3D%2254.78%2036.031%2056.128%2047.544%2054.469%2056%2046.788%2056%2040.317%2045.819%2050.939%2043.94%2054.78%2036.031%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20points%3D%2245.797%2023.608%2054.99%2035.597%2056.128%2047.239%2054.469%2056%2026.692%2056%2016%2032.86%2016.813%2028.219%2019.252%2025.222%2037.558%2016%2041.377%2016.807%2044.02%2020.917%2039.008%2024.27%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20points%3D%2247.359%2056%2040.298%2045.797%2016.813%2028.219%22/%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20points%3D%2254.99%2035.597%2051.095%2043.659%2040.298%2045.797%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "tigre": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23e27022%22%20d%3D%22m9.5447%2C27.49l-.1547.1804c-.257.2996-.5227.5916-.7969.8756l-1.2493%2C1.2939c-1.2468%2C1.2914-2.032%2C2.9586-2.2333%2C4.7423l-.1322%2C1.1715c-.0543.4813-.0301.9682.0719%2C1.4417l.0183.0848c.1556.7231.5864%2C1.3573%2C1.2013%2C1.7684h0c.3917.2619.8774.3418%2C1.3323.219l5.1525-1.3902.7168-.1612c.9138-.2055%2C1.8064.4194%2C1.926%2C1.3483l.1459%2C1.1336c.1449%2C1.1259-.2891%2C2.2487-1.1535%2C2.9845l-1.9651%2C1.6725c-.1119.0953-.2323.173-.3655.235-.0036.0017-.0071.0033-.0108.005-.6513.3037-1.2319.7507-1.6706%2C1.3198-1.1777%2C1.5277-2.1307%2C3.415-1.962%2C5.2173.1252%2C1.3383%2C1.3591%2C2.3006%2C2.7016%2C2.234h0c.9173-.0455%2C1.7495-.5515%2C2.212-1.345l.1254-.2151c.2571-.4411.4395-.9217.5399-1.4222h0c.1777-.8863.7128-1.6603%2C1.4792-2.1396l4.0135-2.5101c1.7252-1.0789%2C3.3154-2.3599%2C4.7369-3.8158h0c.262-.2683.6085-.4382.981-.4811l6.216-.7154%2C5.6467-.5844c.761-.0788%2C1.51-.2479%2C2.2311-.5038l.5269-.187c1.3994-.4967%2C2.9329.2589%2C3.3917%2C1.6712l.6626%2C2.0398c.2213.6813.4706%2C1.3532.7473%2C2.0139l.3874.925c.592%2C1.4138.7743%2C2.9656.526%2C4.4781l-.3452%2C2.1026c-.0298.1818-.0496.3651-.0591.549h0c-.0392.7591.2566%2C1.4971.8092%2C2.019h0c.3029.2861.7038.4455%2C1.1205.4455h0c.6672%2C0%2C1.2672-.4061%2C1.5151-1.0256l1.4114-3.5266c.5129-1.2816.6053-2.6931.2637-4.0307l-.0368-.144c-.2018-.7901-.2935-1.6043-.2725-2.4195l.0062-.2394c.0674-2.6158.6479-5.1929%2C1.7084-7.5851l.3504-.7904c.2564-.5783.4929-1.1652.7092-1.7596l.9483-2.6062c.0578-.1588.0918-.3252.0971-.4941.0264-.837.005-3.4838-1.2158-4.9634-.9571-1.16-4.229-1.8867-6.3784-2.2508-1.1487-.1945-2.3111-.2836-3.4761-.2836h-4.5821c-1.0801%2C0-2.159.0703-3.23.2105l-5.55.7267-4.322.4277c-.3969.0393-.7954.0589-1.1942.0589h-.5147c-1.7415%2C0-3.472.2767-5.1267.8196l-1.526.5007c-.5361.1759-1.1029.2389-1.6646.1851h0c-.4718-.0452-.9321-.1725-1.36-.3762h0c-1.3997-.6661-3.0722-.3116-4.0813.8651Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d0cfce%22%20d%3D%22m23.5711%2C44.9608l.193%2C1.8716c.0072.0703.0183.1402.0331.2093l.2831%2C1.3229c.2226%2C1.0402.2544%2C2.1122.0939%2C3.1638l-.041.2686c-.1262.8269-.0152%2C1.6727.3203%2C2.439h0c.1156.264.2879.4993.5047.6892h0c.3576.3131.8168.4857%2C1.2921.4857h0c1.0125%2C0%2C1.9011-.6743%2C2.1737-1.6494l.6693-2.3945c.3163-1.1314.4766-2.3007.4766-3.4754v-2.5414c0-2.0309-1.7397-3.6258-3.7629-3.4497h0c-.7408.0645-1.4068.4771-1.7944%2C1.1117h0c-.3565.5837-.5116%2C1.2683-.4415%2C1.9487Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23e27022%22%20d%3D%22m50.6472%2C42.7287l.75.926c.9547%2C1.1787%2C2.0567%2C2.2299%2C3.2791%2C3.1278l.1085.0797c1.232.905%2C2.2792%2C2.0378%2C3.0847%2C3.337l.0228.0368c.6085.9814%2C1.0533%2C2.0554%2C1.3168%2C3.1797l.0373.159c.1732.7388.7533%2C1.3136%2C1.4936%2C1.48l.1347.0303c.7087.1593%2C1.4478-.0823%2C1.9256-.6295h0c1.2429-1.4234%2C1.4366-3.5434.3323-5.0768-.1207-.1675-.2512-.329-.3913-.4834l-2.2468-2.3685c-.159-.1677-.2875-.3619-.3796-.5738l-2.2454-5.1689c-.0766-.1762-.1271-.3627-.1499-.5535l-.6895-5.7587c-.1822-1.5216-.6656-2.9917-1.4221-4.3244h0c-.4005-.7056-.9027-1.3483-1.4906-1.9074h0c-.2948-.2804-.769-.8461-1.0929-.4368l-.1725%2C3.8388c.2473%2C1.3522.1794%2C2.7433-.1987%2C4.065h0c-.2931%2C1.0249-.6954%2C2.0153-1.1999%2C2.9544l-1.012%2C1.884c-.2474.4606-.3026%2C1.0004-.1536%2C1.5015h0c.0739.2486.196.4802.3592.6817Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d0cfce%22%20d%3D%22m25.5738%2C41.5481l5.0146-.1092c.0411-.0009.0821-.004.1229-.0094l4.7081-.6208c.0282-.0037.0562-.0085.0839-.0143l4.6458-.9737c.0495-.0104.0982-.024.1458-.0409l1.4408-.5112c.396-.1405.6811-.4894.7399-.9055l.2745-1.9437c.1292-.9146-.8268-1.5898-1.6416-1.1548-2.6884%2C1.4352-8.0414%2C3.6577-15.559%2C3.7684-.6192.0091-1.1251.4999-1.1275%2C1.1191l-.001.2636c-.0025.6344.5185%2C1.1461%2C1.1527%2C1.1323Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d0cfce%22%20d%3D%22m15.1212%2C31.9599c1.0561.2321%2C1.6643%2C1.3522%2C1.3616%2C2.3903l-.6451%2C2.2123h0c-.2417.7818-.9195%2C1.3491-1.7317%2C1.4493l-2.1272.2623c-.8463.1044-1.6692.3492-2.4348.7244l-.4685.2296c-.5842.2863-1.234-.2525-1.0515-.877.5589-1.9129%2C1.7919-5.0218%2C4.1126-6.1842-.0003-.0001%2C1.6161-.5078%2C2.9846-.207Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d0cfce%22%20d%3D%22m57.5464%2C40.7282c.1008-.1017.2721-.0717.3324.0582l1.4415%2C3.1063c.639%2C1.3771%2C1.5799%2C2.589%2C2.7369%2C3.5718.8876.7539%2C1.8416%2C1.6596%2C2.1074%2C2.2666.1993.5365.3409%2C1.0912.4233%2C1.6548.126.8615-.2472%2C1.7213-.9731%2C2.202h0c-.5552.3677-2.9707.996-3.4803.5674h0c-.6402-.5384-.8196-.929-1.0346-1.7373l-.0571-.2348c-.1727-.7101-.496-1.3669-.8717-1.9937-.0472-.0787-.0867-.1633-.1242-.2748h0c-.245-.7294-.7297-1.3543-1.3752-1.7731l-.1654-.1073c-.7171-.4653-1.4011-.9799-2.0469-1.5401h0c-.5934-.5147-.659-1.4123-.1466-2.0078l3.2336-3.7581Z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m12.1118%2C37.5052l-2.4246%2C1.5916c-.419.275-.9092.4215-1.4104.4215h-.8551c-.7039-.0001-1.3769-.2891-1.8617-.7994h0c-.567-.5968-.8136-1.4291-.6633-2.2384l.7202-3.8778c.1099-.5916.4343-1.1219.911-1.4892l2.5175-1.9396s1.363-5.2538%2C4.7676-2.6374c3.8838%2C2.9846-1.7758%2C5.2236-1.7758%2C5.2236%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m14.8519%2C27.6188s5.5681-2.7151%2C9.0881-2.2188c1.4273.1718%2C2.8731.1086%2C4.28-.1869%2C5.3712-1.018%2C16.7957-2.6465%2C22.5624.5368%2C0%2C0%2C8.7736%2C2.5188%2C9.787%2C17.6594.0731%2C1.3611.6901%2C2.6358%2C1.7123%2C3.5375%2C1.2438%2C1.058%2C4.3018%2C1.8859%2C5.0518-2.1974%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m24.2555%2C37.3332s.9081%2C5.3808-1.5889%2C6.9168c-2.7974%2C1.7208-8.7769%2C5.4861-8.7769%2C5.4861%2C0%2C0%2C.6949%2C5.7817-3.7587%2C3.5413%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m16.7957%2C33.277s-2.0215%2C2.6553-.6317%2C8.7261l-4.414%2C4.33%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m24.629%2C42.0031s12.571-.9207%2C14.9086-2.0142%2C3.0907-.9552%2C3.0907-.9552%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m42.7736%2C34.5s-1.784%2C5.1542%2C3.4593%2C14.2605l-1.2%2C5.202c-.2309%2C1.001.3933%2C1.9996%2C1.3943%2C2.2305.1371.0316.2774.0476.4181.0476h.0024c.7907%2C0%2C1.4949-.4999%2C1.7558-1.2463l2.1789-6.2338s-2.6532-4.9632.0632-9.7268%2C1.9879-7.45%2C1.9879-7.45%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m49.8724%2C41.5141s4.0648%2C5.2765%2C7.1008%2C6.7766c2.11%2C1.0426%2C1.9436%2C4.4593%2C1.9436%2C4.4593v.173c0%2C1.1046.8954%2C2%2C2%2C2%2C.029%2C0%2C.058-.0006.087-.0019l.75-.0326c1.0697-.0466%2C1.913-.9274%2C1.913-1.9981v-.1088%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m24.629%2C46.7007c.3673%2C2.1041.3673%2C4.2559%2C0%2C6.36h0c-.4371.8095-.1351%2C1.8201.6744%2C2.2572.2432.1313.5152.2.7915.2h.41c.7563%2C0%2C1.4177-.5095%2C1.6107-1.2408l1.0516-4.61-.3853-8.0173%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m26.7967%2C25.4963s4.0366%2C3.3371%2C2.37%2C12.67%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m33.3883%2C41.1571s2.2784-6.5738.6227-11.74%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m37.1262%2C24.0725s2.091%2C2.5109%2C2.1744%2C8.0942%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m43.1546%2C23.9437s2.3454%2C1.723%2C2.1787%2C6.0563%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m21.5%2C32.6622c.1446-2.4026-.441-4.7927-1.68-6.8562%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "cangrejo": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d22f27%22%20d%3D%22M36.4416%2C31.0781s5.3372-1.1983%2C9.6068%2C4.7934c1.8117%2C2.5424%2C3.0945%2C2.5525%2C3.9162%2C3.3951.2268.2326%2C1.3914%2C1.8713%2C1.5586%2C2.0189%2C1.2509%2C1.1039%2C1.0841%2C2.6158%2C1.1856%2C4.2657.0492.799-.1324%2C3.2126-1.0058%2C3.63-1.5679.7495-1.9749%2C2.2278-5.6546%2C3.4671%2C0%2C0-6.4046%2C1.1983-9.6068-2.3967%2C0%2C0-3.2022%2C4.7934-11.7417%2C1.1983a7.4677%2C7.4677%2C0%2C0%2C1-4.0159-3.291C19.95%2C46.6762%2C19.163%2C44.84%2C20.18%2C42.84a5.8506%2C5.8506%2C0%2C0%2C1%2C1.0169-2c1.41-1.5834%2C4.5741-4.4271%2C5.0844-5C28.4159%2C33.4434%2C32.1719%2C29.88%2C36.4416%2C31.0781Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ea5a47%22%20d%3D%22M17.2077%2C34.6889c-.1709%2C0-.3418-.0049-.5117-.0127a4.0515%2C4.0515%2C0%2C0%2C1-1.9805-.5283%2C1.0014%2C1.0014%2C0%2C0%2C1-.3574-1.3018l3.7177-7.2724a1.0067%2C1.0067%2C0%2C0%2C1%2C.5245-.4756%2C7.9385%2C7.9385%2C0%2C0%2C0%2C4.6738-5.2373.9995.9995%2C0%2C0%2C1%2C1.6767-.4444%2C8.8185%2C8.8185%2C0%2C0%2C1%2C1.1065%2C10.4395A10.4147%2C10.4147%2C0%2C0%2C1%2C17.2077%2C34.6889Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ea5a47%22%20d%3D%22M21.7309%2C44.231c-6.0292%2C5.4359-12.6013-9.0188-7-10.0005%2C0%2C.0005%2C4%2C.0005%2C4%2C2.0005s-1.6667%2C5%2C2.6667%2C6.5Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d22f27%22%20d%3D%22M13.4921%2C33.043s-8.3114-8.2415%2C3.4967-16.0242c0%2C0%2C4.522-2.1335%2C6.7065.153%2C0%2C0-6.3308%2C2.9869-5.955%2C6.1268s2.9869%2C6.3307.7%2C8.5152A13.3807%2C13.3807%2C0%2C0%2C1%2C13.4921%2C33.043Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ea5a47%22%20d%3D%22M45.9427%2C29.8559a8.8185%2C8.8185%2C0%2C0%2C1%2C1.1065-10.4395.9995.9995%2C0%2C0%2C1%2C1.6767.4444A7.9385%2C7.9385%2C0%2C0%2C0%2C53.4%2C25.0981a1.0067%2C1.0067%2C0%2C0%2C1%2C.5245.4756l3.7177%2C7.2724a1.0014%2C1.0014%2C0%2C0%2C1-.3574%2C1.3018%2C4.0515%2C4.0515%2C0%2C0%2C1-1.98.5283c-.17.0078-.3408.0127-.5117.0127A10.4147%2C10.4147%2C0%2C0%2C1%2C45.9427%2C29.8559Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ea5a47%22%20d%3D%22M50.6024%2C42.731c4.3334-1.5%2C2.6667-4.5%2C2.6667-6.5s4-2%2C4-2.0005c5.601.9817-.9711%2C15.4364-7%2C10.0005Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23d22f27%22%20d%3D%22M53.5593%2C31.8138c-2.2865-2.1845.3247-5.3753.7-8.5152s-5.955-6.1268-5.955-6.1268c2.1845-2.2865%2C6.7065-.153%2C6.7065-.153%2C11.8081%2C7.7827%2C3.4967%2C16.0242%2C3.4967%2C16.0242A13.3807%2C13.3807%2C0%2C0%2C1%2C53.5593%2C31.8138Z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M51.38%2C48.0367c-.7015%2C1.3785-2.3662%2C2.7692-5.8135%2C3.8034%2C0%2C0-6%2C1-9-2%2C0%2C0-3%2C4-11%2C1a6.968%2C6.968%2C0%2C0%2C1-3.7623-2.7463%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M23.6494%2C39.7568%2C27.5661%2C35.84c2-2%2C5-5%2C9-4%2C0%2C0%2C5-1%2C9%2C4A36.4889%2C36.4889%2C0%2C0%2C0%2C49.19%2C39.8862%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M25.5661%2C50.84a3.699%2C3.699%2C0%2C0%2C0-2%2C3%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M29.6494%2C51.9234A3.8823%2C3.8823%2C0%2C0%2C0%2C28.5661%2C54.84%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M44.5661%2C51.9234A3.8823%2C3.8823%2C0%2C0%2C1%2C45.6494%2C54.84%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232.5661%22%20cy%3D%2227.3401%22%20rx%3D%221%22%20ry%3D%222.5%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.5661%22%20cy%3D%2227.3401%22%20rx%3D%221%22%20ry%3D%222.5%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M48.9014%2C50.5918s1.7184%2C1.2213%2C1.3293%2C2.4966%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M21.7309%2C44.231s-5%2C4-8-3%2C1-7%2C1-7%2C4%2C0%2C4%2C2-1.6667%2C5%2C2.6667%2C6.5Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M13.4921%2C33.043s-8.3114-8.2415%2C3.4967-16.0242c0%2C0%2C4.522-2.1335%2C6.7065.153C9.6737%2C22.8554%2C27.6909%2C31.7886%2C13.4921%2C33.043Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M18.9663%2C26.0289A8.9447%2C8.9447%2C0%2C0%2C0%2C24.24%2C20.12a7.817%2C7.817%2C0%2C0%2C1%2C.9574%2C9.2267%2C9.3849%2C9.3849%2C0%2C0%2C1-8.4513%2C4.3305%2C3.077%2C3.077%2C0%2C0%2C1-1.4973-.3754%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M50.6024%2C42.731c4.3334-1.5%2C2.6667-4.5%2C2.6667-6.5s4-2%2C4-2%2C4%2C0%2C1%2C7-8%2C3-8%2C3Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M48.3047%2C17.1718c2.1845-2.2865%2C6.7065-.153%2C6.7065-.153%2C11.8081%2C7.7827%2C3.4967%2C16.0242%2C3.4967%2C16.0242C44.3091%2C31.7886%2C62.3263%2C22.8554%2C48.3047%2C17.1718Z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M53.0337%2C26.0289A8.9447%2C8.9447%2C0%2C0%2C1%2C47.76%2C20.12a7.817%2C7.817%2C0%2C0%2C0-.9574%2C9.2267%2C9.3849%2C9.3849%2C0%2C0%2C0%2C8.4513%2C4.3305%2C3.077%2C3.077%2C0%2C0%2C0%2C1.4973-.3754%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "playa": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F1B31C%22%20d%3D%22M10%2C50c0-1%2C10.9255-10.6791%2C24-8.5c0.3311%2C0.0552%2C0.6606%2C0.1119%2C0.9885%2C0.17l5.5038%2C1.1217%20C49.5282%2C44.8554%2C59%2C49%2C60%2C49.4953c0%2C0%2C1.0586%2C1.1176%2C0.6667%2C2.4214C60.2708%2C53.2333%2C57.1563%2C54%2C57.1563%2C54h-5.601l-5.8296%2C1.2432%20L27.5833%2C55l-12.4981-1H11.75c0%2C0-1.2199-0.5756-1.75-1.8333C9.4688%2C50.9063%2C10%2C50%2C10%2C50z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%2392D3F5%22%20d%3D%22M12%2C55.5c1.7419-2.0295%2C4.3382-5.4262%2C7-5c2.888%2C0.4624%2C4.6471%2C4.065%2C6.4235%2C4.065%20c2.8824%2C0%2C4.5234-3.588%2C8.5765-4.065c3.6107-0.4249%2C3.5938%2C2.2813%2C6.0156%2C3.6719C40.9893%2C54.731%2C42.6139%2C54.4981%2C43%2C54.5%20c3.6617%2C0.0176%2C4.9681-3.9727%2C8-4c4.0625-0.0366%2C7.4063%2C1.5625%2C8%2C5%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M52.2263%2C33.4883C53.3772%2C26.9616%2C48.7987%2C20.6988%2C42%2C19.5s-13.243%2C3.1204-14.3939%2C9.6471L52.2263%2C33.4883z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23EA5A47%22%20d%3D%22M44.8403%2C32.1859C45.9911%2C25.6592%2C44.7195%2C19.9795%2C42%2C19.5s-5.857%2C4.4227-7.0078%2C10.9495L44.8403%2C32.1859z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22hair%22/%3E%0A%20%20%3Cg%20id%3D%22skin%22/%3E%0A%20%20%3Cg%20id%3D%22skin-shadow%22/%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M12%2C54.5c1.7419-2.0295%2C4.3382-4.4262%2C7-4c2.888%2C0.4624%2C3.3025%2C3.4841%2C6%2C4c3.091%2C0.5912%2C4.9469-3.523%2C9-4%20c3.6107-0.4249%2C4.0565%2C2.411%2C6.6667%2C3.5456C41.6964%2C54.4932%2C42.6139%2C54.4981%2C43%2C54.5c3.6617%2C0.0176%2C4.9951-3.5954%2C8-4%20c1.3292-0.179%2C3.3015%2C0.2273%2C6%2C3%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M41.687%2C44.0801C50.7229%2C46.1438%2C56.7475%2C48.5%2C60%2C48.5%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M10%2C49c3.572-0.3572%2C9.7488-8.8785%2C22.8233-6.6994c0.3311%2C0.0552%2C0.6606%2C0.1119%2C0.9885%2C0.17%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M52.2263%2C33.4883C53.3772%2C26.9616%2C48.7987%2C20.6988%2C42%2C19.5s-13.243%2C3.1204-14.3939%2C9.6471L52.2263%2C33.4883z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M44.8403%2C32.1859C45.9911%2C25.6592%2C44.7195%2C19.9795%2C42%2C19.5s-5.857%2C4.4227-7.0078%2C10.9495L44.8403%2C32.1859z%22/%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20points%3D%2237.3115%2C46.0898%2037.3115%2C46.0898%2039.9162%2C31.3177%2039.9162%2C31.3177%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "trigo": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2235.8096%22%20cy%3D%2210.1616%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20fill%3D%22%23f4aa41%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2219.2067%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-4.4175%2027.7488%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2227.3474%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-10.1737%2030.1331%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2235.488%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-15.93%2032.5174%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2243.6286%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-21.6863%2034.9018%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2251.7692%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-27.4426%2037.2861%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2219.2067%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-1.6567%2034.414%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2227.3474%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-7.4129%2036.7983%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2235.488%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-13.1692%2039.1826%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2243.6286%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-18.9255%2041.5669%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2251.7692%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-24.6818%2043.9513%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M35.79%2C56v9%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2235.8096%22%20cy%3D%2210.1616%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20fill%3D%22%23f4aa41%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2219.2067%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-4.4175%2027.7488%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2227.3474%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-10.1737%2030.1331%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2235.488%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-15.93%2032.5174%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2243.6286%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-21.6863%2034.9018%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2251.7692%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-27.4426%2037.2861%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2219.2067%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-1.6567%2034.414%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2227.3474%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-7.4129%2036.7983%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2235.488%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-13.1692%2039.1826%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2243.6286%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-18.9255%2041.5669%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2251.7692%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-24.6818%2043.9513%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2235.8096%22%20cy%3D%2210.1616%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2219.2067%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-4.4175%2027.7488%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2227.3474%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-10.1737%2030.1331%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2235.488%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-15.93%2032.5174%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2243.6286%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-21.6863%2034.9018%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2251.7692%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-27.4426%2037.2861%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2219.2067%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-1.6567%2034.414%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2227.3474%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-7.4129%2036.7983%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2235.488%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-13.1692%2039.1826%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2243.6286%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-18.9255%2041.5669%29%20rotate%28-45%29%22%20fill%3D%22%23f1b31c%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2251.7692%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-24.6818%2043.9513%29%20rotate%28-45%29%22%20fill%3D%22%23f4aa41%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2235.8096%22%20cy%3D%2210.1616%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2219.2067%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-4.4175%2027.7488%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2227.3474%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-10.1737%2030.1331%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2235.488%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-15.93%2032.5174%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2243.6286%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-21.6863%2034.9018%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2231.287%22%20cy%3D%2251.7692%22%20rx%3D%223.4814%22%20ry%3D%225.1616%22%20transform%3D%22translate%28-27.4426%2037.2861%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2219.2067%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-1.6567%2034.414%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2227.3474%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-7.4129%2036.7983%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2235.488%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-13.1692%2039.1826%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2243.6286%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-18.9255%2041.5669%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2240.713%22%20cy%3D%2251.7692%22%20rx%3D%225.1616%22%20ry%3D%223.4814%22%20transform%3D%22translate%28-24.6818%2043.9513%29%20rotate%28-45%29%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "tulipán": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%235C9E31%22%20stroke%3D%22none%22%20d%3D%22M23.6968%2C59.4302c0%2C0-8.7685-5.362-9.193-14.6985c-0.4359-9.5866%2C9.2144-26.9468%2C9.2144-26.9468%20S18.9979%2C38.4911%2C23.6968%2C59.4302z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F4AA41%22%20stroke%3D%22none%22%20d%3D%22M50.7169%2C27.3033c-2.7631-0.1233-8.0574%2C1.5799-9.5149%2C2.8892c-2.4893%2C2.2362-2.9448%2C2.8517-3.8431%2C6.4732%20c-0.1034%2C0.4169%2C0.08%2C0.5524%2C0.1891%2C1.413c0.1488%2C1.1738-3.5923-1.3633-3.5923-1.3633c-2.1365-1.8582-1.2818-5.2882-0.1597-7.8879%20c2.6922-6.2376%2C14.314-9.8962%2C16.4506-8.0381c0%2C0%2C0.9568%2C1.2159%2C1.1218%2C6.4742L50.7169%2C27.3033z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F4AA41%22%20stroke%3D%22none%22%20d%3D%22M57.2882%2C29.8721c1.3436%2C2.4925-3.0561%2C13.578-9.7327%2C14.8346c-2.1528%2C0.4052-3.8746-0.0623-5.7286-1.4619%20c-0.9986-0.7539-1.8237-1.7212-2.4582-2.7997v0c-1.5547-2.3665-0.8443-5.7082%2C0.9387-7.9079%20C44.5854%2C27.2595%2C55.7335%2C27.5056%2C57.2882%2C29.8721%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23E27022%22%20stroke%3D%22none%22%20d%3D%22M52.9482%2C22.6663c2.1629-0.5025%2C4.2949-0.3222%2C4.8381%2C0.3621%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23E27022%22%20stroke%3D%22none%22%20d%3D%22M51.3683%2C27.2636c0%2C0-0.3688-4.5372-0.4588-4.763c-0.1099-0.2756%2C3.1089-2.0736%2C6.8768-1.1484%20c3.7679%2C0.9252%2C0%2C7.9946%2C0%2C7.9946l-1.3267-0.9953c-0.2155-0.1617-0.4588-0.2727-0.7228-0.3265%20C54.5558%2C27.7843%2C51.3683%2C27.2636%2C51.3683%2C27.2636z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22hair%22/%3E%0A%20%20%3Cg%20id%3D%22skin%22/%3E%0A%20%20%3Cg%20id%3D%22skin-shadow%22/%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M23.6968%2C59.4302%20c0%2C0-8.7685-5.362-9.193-14.6985c-0.4359-9.5866%2C9.2144-26.9468%2C9.2144-26.9468S18.9979%2C38.4911%2C23.6968%2C59.4302z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M34.0878%2C41.2889%20c-3.438%2C3.548-7.676%2C10.246-5.829%2C20.735%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M57.0838%2C29.8721%20c1.3436%2C2.4925-3.0561%2C13.578-9.7327%2C14.8346c-2.1528%2C0.4052-3.8746-0.0623-5.7286-1.4619%20c-0.9986-0.7539-1.8237-1.7212-2.4582-2.7997v0c-1.5547-2.3665-0.8443-5.7082%2C0.9387-7.9079%20C44.381%2C27.2595%2C55.5291%2C27.5056%2C57.0838%2C29.8721%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M53.5368%2C22.3417%20c2.1629-0.5025%2C4.2949-0.3222%2C4.8381%2C0.3621%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M58.375%2C22.7039%20c0.3869%2C0.5853%2C0.2321%2C2.1634-0.3773%2C3.8327%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M34.5658%2C35.9276%20c-2.1322-1.8631-1.8894-4.8477-0.7613-7.4448c2.7067-6.2313%2C13.5127-8.9826%2C15.645-7.1195%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M49.3038%2C21.1954%20c0.506%2C0.5262%2C0.7973%2C1.5901%2C0.8465%2C3.1014%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A", "girasol": "data:image/svg+xml,%3Csvg%20id%3D%22emoji%22%20viewBox%3D%220%200%2072%2072%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cg%20id%3D%22color%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FCEA2B%22%20stroke%3D%22none%22%20d%3D%22M43.2779%2C20.5208c0.2751-0.6458%2C1.4448-3.2894%2C1.915-3.8596c2.5924-3.1437%2C7.5403-3.3442%2C7.5403-3.3442%20s0.7413%2C4.8964-1.8486%2C8.0389c-0.7005%2C0.8493-1.573%2C1.4837-2.4733%2C1.9575l-1.8646%2C0.8496%20c0.8166-0.4354%2C3.5897-1.6339%2C4.5743-1.7568c4.0433-0.5046%2C7.7775%2C2.7478%2C7.7775%2C2.7478s-2.8239%2C4.0682-6.8647%2C4.5736%20c-1.5043%2C0.1875-2.9658-0.1449-4.2082-0.6363l-1.5123-0.5623c1.0721%2C0.4001%2C3.6449%2C1.5619%2C4.525%2C2.46%20c2.8519%2C2.9103%2C2.5281%2C7.8516%2C2.5281%2C7.8516s-4.9474%2C0.2194-7.7984-2.6884c-0.6293-0.6423-1.8855-3.7761-2.2431-4.5413%20l0.7669%2C2.3973c0.2385%2C0.7124%2C0.3923%2C1.4743%2C0.4068%2C2.268c0.0742%2C4.074-3.5548%2C7.4433-3.5548%2C7.4433s-3.7467-3.2383-3.822-7.3099%20c-0.0151-0.834%2C1.3468-4.7053%2C1.3468-4.7053l-1.1396%2C2.622c-1.7718%2C2.4884-4.5155%2C4.1433-7.5548%2C4.4487%20c-0.9254%2C0.093-1.5437%2C0.0656-1.5437%2C0.0656s-0.3238-4.9413%2C2.5281-7.8516c0.8287-0.8457%2C1.8343-1.4269%2C2.844-1.8259l1.711-0.7108%20c-0.0038%2C0.0015-4.3141%2C1.4544-5.7507%2C1.2753c-4.0408-0.5054-6.8647-4.5736-6.8647-4.5736s3.7341-3.2524%2C7.7775-2.7478%20c0.8371%2C0.1045%2C3.8427%2C1.578%2C4.5608%2C1.9202l-2.2099-1.2115c-0.7715-0.4485-1.5076-1.0231-2.1146-1.759%20c-2.59-3.1425-1.8486-8.0389-1.8486-8.0389s4.9479%2C0.2005%2C7.5403%2C3.3441c0.5013%2C0.6079%2C1.8537%2C3.2157%2C2.135%2C3.9064l-0.9102-1.9404%20c-0.2945-0.7916-0.49-1.6496-0.5066-2.5482c-0.0737-4.0736%2C3.5548-7.4433%2C3.5548-7.4433s3.7478%2C3.2359%2C3.822%2C7.3099%20c0.0163%2C0.8967-0.1467%2C1.7592-0.411%2C2.5592%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2240.7923%22%20cy%3D%2226.177%22%20r%3D%225%22%20fill%3D%22%23F1B31C%22%20stroke%3D%22none%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%235C9E31%22%20stroke%3D%22none%22%20d%3D%22M23.3647%2C38.9665c2.3438%2C2.8687%2C1.6469%2C7.3169%2C1.6469%2C7.3169s-4.4974-0.2037-6.8419-3.0725%20s-1.6469-7.3169-1.6469-7.3169S21.0209%2C36.1001%2C23.3647%2C38.9665z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%235C9E31%22%20stroke%3D%22none%22%20d%3D%22M36.6533%2C52.5013c2.8575-2.3347%2C7.2883-1.6405%2C7.2883-1.6405s-0.2029%2C4.4799-3.0605%2C6.8152%20c-2.8575%2C2.3353-7.2883%2C1.6405-7.2883%2C1.6405S33.7981%2C54.836%2C36.6533%2C52.5013z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22hair%22/%3E%0A%20%20%3Cg%20id%3D%22skin%22/%3E%0A%20%20%3Cg%20id%3D%22skin-shadow%22/%3E%0A%20%20%3Cg%20id%3D%22line%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2240.7923%22%20cy%3D%2226.177%22%20r%3D%225%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M23.8586%2C38.5631%20c2.7895%2C3.4142%2C1.96%2C8.708%2C1.96%2C8.708s-5.3525-0.2425-8.1427-3.6566s-1.96-8.708-1.96-8.708S21.0691%2C35.1517%2C23.8586%2C38.5631z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M43.2779%2C20.5208%20c0.2751-0.6458%2C1.4448-3.2894%2C1.915-3.8596c2.5924-3.1437%2C7.5403-3.3442%2C7.5403-3.3442s0.7413%2C4.8964-1.8486%2C8.0389%20c-0.7005%2C0.8493-1.573%2C1.4837-2.4733%2C1.9575l-1.8646%2C0.8496c0.8166-0.4354%2C3.5897-1.6339%2C4.5743-1.7568%20c4.0433-0.5046%2C7.7775%2C2.7478%2C7.7775%2C2.7478s-2.8239%2C4.0682-6.8647%2C4.5736c-1.5043%2C0.1875-2.9658-0.1449-4.2082-0.6363%20l-1.5123-0.5623c1.0721%2C0.4001%2C3.6449%2C1.5619%2C4.525%2C2.46c2.8519%2C2.9103%2C2.5281%2C7.8516%2C2.5281%2C7.8516s-4.9474%2C0.2194-7.7984-2.6884%20c-0.6293-0.6423-1.8855-3.7761-2.2431-4.5413l0.7669%2C2.3973c0.2385%2C0.7124%2C0.3923%2C1.4743%2C0.4068%2C2.268%20c0.0742%2C4.074-3.5548%2C7.4433-3.5548%2C7.4433s-3.7467-3.2383-3.822-7.3099c-0.0151-0.834%2C1.3468-4.7053%2C1.3468-4.7053l-1.1396%2C2.622%20c-1.7718%2C2.4884-4.5155%2C4.1433-7.5548%2C4.4487c-0.9254%2C0.093-1.5437%2C0.0656-1.5437%2C0.0656s-0.3238-4.9413%2C2.5281-7.8516%20c0.8287-0.8457%2C1.8343-1.4269%2C2.844-1.8259l1.711-0.7108c-0.0038%2C0.0015-4.3141%2C1.4544-5.7507%2C1.2753%20c-4.0408-0.5054-6.8647-4.5736-6.8647-4.5736s3.7341-3.2524%2C7.7775-2.7478c0.8371%2C0.1045%2C3.8427%2C1.578%2C4.5608%2C1.9202%20l-2.2099-1.2115c-0.7715-0.4485-1.5076-1.0231-2.1146-1.759c-2.59-3.1425-1.8486-8.0389-1.8486-8.0389s4.9479%2C0.2005%2C7.5403%2C3.3441%20c0.5013%2C0.6079%2C1.8537%2C3.2157%2C2.135%2C3.9064l-0.9102-1.9404c-0.2945-0.7916-0.49-1.6496-0.5066-2.5482%20c-0.0737-4.0736%2C3.5548-7.4433%2C3.5548-7.4433s3.7478%2C3.2359%2C3.822%2C7.3099c0.0163%2C0.8967-0.1467%2C1.7592-0.411%2C2.5592%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M36.2415%2C51.9973%20c3.4142-2.7895%2C8.708-1.96%2C8.708-1.96s-0.2425%2C5.3525-3.6566%2C8.1427c-3.4142%2C2.7902-8.708%2C1.96-8.708%2C1.96%20S32.8301%2C54.7868%2C36.2415%2C51.9973z%22/%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M34.3663%2C41.0292%20c-3.438%2C3.548-7.676%2C10.246-5.829%2C20.735%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A"};
+function engImg(k){ return IMG_OR[k] || IMG[k]; }
+/* cada escena: quién, qué hace, dónde, opciones que no van con el dibujo y cómo se arma el dibujo
+   (x: centro, b: base, h: alto; en % de la escena, que es 7:5) */
+var ENG_ESCENAS = [
+  {q:"la bruja", c:"con sombrero", cx:["con corona", "con plumas"], h:"vuela sobre su escoba", d:"de árbol en árbol", qx:["la princesa","la cabra"], hx:["planta flores","frena"], dx:["en la estación","por la playa"],
+   dib:[{k:"árbol",x:13,b:98,h:56},{k:"árbol",x:87,b:98,h:56},{k:"escoba",x:50,b:80,h:58,rot:52,z:3},{k:"bruja",x:53,b:58,h:38,z:4}]},
+  {q:"el dragón", c:"verde", cx:["rojo", "blanco"], h:"vuela", d:"sobre el castillo", qx:["el grillo","el tigre"], hx:["trepa","frena"], dx:["en el campo","por la playa"],
+   dib:[{k:"castillo",x:50,b:98,h:52},{k:"dragón",x:52,b:46,h:42,z:3}]},
+  {q:"la princesa", c:"con corona", cx:["con sombrero", "con plumas"], h:"planta flores", d:"en el jardín", qx:["la bruja","la cabra"], hx:["vuela sobre su escoba","frena"], dx:["en la estación","sobre el castillo"],
+   dib:[{k:"girasol",x:14,b:98,h:34},{k:"princesa",x:42,b:98,h:64},{k:"tulipán",x:72,b:98,h:32},{k:"flor",x:88,b:98,h:30}]},
+  {q:"el grillo", c:"verde", cx:["negro", "rojo"], h:"brinca", d:"entre las flores", qx:["el tigre","el tractor"], hx:["frena","vuela sobre su escoba"], dx:["en el agua","en la estación"],
+   dib:[{k:"girasol",x:16,b:98,h:52},{k:"tulipán",x:84,b:98,h:50},{k:"flor",x:66,b:98,h:30},{k:"grillo",x:44,b:72,h:36,z:3}]},
+  {q:"el tren", c:"gris", cx:["verde", "azul"], h:"frena", d:"en la estación", qx:["el tractor","el globo"], hx:["brinca","planta flores"], dx:["entre las flores","en el cielo"],
+   dib:[{k:"estación",x:50,b:99,h:88}]},
+  {q:"el cocodrilo", c:"verde", cx:["blanco", "rojo"], h:"flota", d:"en el agua", qx:["el cangrejo","el tigre"], hx:["trepa","vuela"], dx:["en el cielo","sobre el castillo"],
+   dib:[{agua:66},{k:"cocodrilo",x:50,b:76,h:42,z:1}]},
+  {q:"la cabra", c:"marrón", cx:["blanca", "negra"], h:"trepa", d:"por las piedras", qx:["la bruja","la princesa"], hx:["flota","frena"], dx:["en el agua","en la estación"],
+   dib:[{k:"piedra",x:30,b:98,h:44},{k:"piedra",x:66,b:98,h:58},{k:"cabra",x:66,b:58,h:40,z:3}]},
+  {q:"el tigre", c:"con rayas", cx:["con manchas", "con plumas"], h:"descansa", d:"debajo del árbol", qx:["el grillo","el dragón"], hx:["vuela","frena"], dx:["en el agua","en el cielo"],
+   dib:[{k:"árbol",x:46,b:98,h:88},{k:"tigre",x:58,b:99,h:34,z:3}]},
+  {q:"el cangrejo", c:"rojo", cx:["verde", "blanco"], h:"camina", d:"por la playa", qx:["el cocodrilo","el grillo"], hx:["vuela","trepa"], dx:["sobre el castillo","en el cielo"],
+   dib:[{k:"playa",x:34,b:98,h:64},{k:"cangrejo",x:74,b:96,h:32,z:3}]},
+  {q:"el tractor", c:"verde", cx:["rojo", "blanco"], h:"trabaja", d:"en el campo", qx:["el tren","el globo"], hx:["vuela","flota"], dx:["en el agua","en la estación"],
+   dib:[{k:"trigo",x:13,b:98,h:52},{k:"trigo",x:87,b:98,h:52},{k:"tractor",x:50,b:98,h:50,z:3}]},
+  {q:"el globo", c:"rojo", cx:["verde", "blanco"], h:"flota", d:"en el cielo", qx:["el tren","el tractor"], hx:["frena","trabaja"], dx:["en el agua","por la playa"],
+   dib:[{cielo:true},{k:"nube",x:22,b:42,h:32},{k:"nube",x:80,b:56,h:28},{k:"globo",x:52,b:86,h:54,z:3}]}
+];
+function engTexto(toks){
+  var ts = toks.filter(function(x){ return x.t; });
+  return mayus(ts.map(function(x,i){ return x.t+(x.k==="donde" && i===0 ? "," : ""); }).join(" "))+".";
+}
+function engEscena(e){
+  var box = el("div",{class:"escena"});
+  e.dib.forEach(function(it){
+    if(it.agua){ var a = el("div",{class:"agua"}); a.style.top = it.agua+"%"; box.appendChild(a); return; }
+    if(it.cielo){ box.classList.add("cielo"); return; }
+    var w = it.h*5/7, im = el("img",{src:engImg(it.k),alt:"",draggable:"false"});
+    im.style.cssText = "left:"+(it.x-w/2)+"%;top:"+(it.b-it.h)+"%;width:"+w+"%;height:"+it.h+"%;z-index:"+(it.z||2)+(it.rot?";transform:rotate("+it.rot+"deg)":"")+(it.flip?";transform:scaleX(-1)":"");
+    box.appendChild(im);
+  });
+  return box;
+}
+function engordamos(){
+  if(nivel!==3){ var p0 = pantalla("Engordamos la oración","",0); vacio(p0,"Este juego es para el nivel 3."); return; }
+  var rs = mezclar(ENG_ESCENAS).slice(0,4), n = 0;
+  var p = pantalla("Engordamos la oración","Miramos el dibujo y contestamos: ¿quién?, ¿qué hace?, ¿cómo es?, ¿dónde? Así armamos la oración y la engordamos.", rs.length);
+  ronda();
+  function ronda(){
+    if(n>=rs.length){ terminar(p,"Armaste y engordaste todas las oraciones.",engordamos); return; }
+    var e = rs[n], pend = null, flaca = "";
+    var toks = [{k:"quien",t:"",preg:"¿Quién?"},{k:"hace",t:"",preg:"¿Qué hace?"}];
+    p.mesa.innerHTML = "";
+    var orac = el("div",{class:"oracion"}), av = aviso(), zona = el("div",{class:"zona"});
+    p.mesa.appendChild(engEscena(e)); p.mesa.appendChild(orac); p.mesa.appendChild(av); p.mesa.appendChild(zona);
+    pintar(); pasoQuien();
+
+    function pintar(){
+      orac.innerHTML = "";
+      for(var pos=0; pos<=toks.length; pos++){
+        if(pend) orac.appendChild(hueco(pos));
+        if(pos<toks.length){
+          var x = toks[pos];
+          if(!x.t){ orac.appendChild(el("span",{class:"falta"+(x.ahora?" ahora":""),text:x.preg})); continue; }
+          var t = (pos===0 ? mayus(x.t) : x.t) + (x.k==="donde" && pos===0 ? "," : "");
+          orac.appendChild(el("span",{class:"w"+(x.nueva?" nueva":""),text:t}));
+        }
+      }
+      if(toks[1].t){
+        var ult = orac.lastChild; orac.removeChild(ult);
+        orac.appendChild(el("span",{class:"junto-punto"},[ult, el("span",{class:"w punto",text:"."})]));
+      }
+    }
+    function marcar(tok){ toks.forEach(function(x){ x.nueva = (x===tok); x.ahora = false; }); }
+    function hueco(pos){
+      var b = el("button",{class:"hueco",type:"button","aria-label":"poner acá",text:"+"});
+      b.addEventListener("click", function(){
+        if(!pend) return;
+        if(pend.ok(pos)){
+          var tok = pend.tok, sig = pend.sig; marcar(tok); toks.splice(pos,0,tok); pend = null; pintar(); sig();
+        } else {
+          pend.fallos++; sacudir(b);
+          var prueba = toks.slice(); prueba.splice(pos,0,pend.tok);
+          if(pend.fallos===1) avisar(av,"Leé cómo quedaría: «"+engTexto(prueba)+"». ¿Suena bien? Probá en otro +.","pista");
+          else avisar(av,pend.pista,"pista");
+        }
+      });
+      return b;
+    }
+    function opciones(lista, buena, siMal, listo){
+      zona.innerHTML = "";
+      var fila = el("div",{class:"opsfila"}), hecho = false;
+      mezclar(lista).forEach(function(op){
+        var b = el("button",{class:"frase",type:"button",text:op});
+        b.addEventListener("click", function(){
+          if(hecho || b.classList.contains("mal")) return;
+          if(op===buena){ hecho = true; b.classList.add("ok"); listo(); }
+          else { b.classList.add("mal"); sacudir(b); avisar(av,siMal(op),"pista"); }
+        });
+        fila.appendChild(b);
+      });
+      zona.appendChild(fila);
+    }
+    function pasoQuien(){
+      toks[0].ahora = true; pintar();
+      avisar(av,"¿Quién está en el dibujo? Leé las tres y elegí.");
+      opciones([e.q].concat(e.qx), e.q, function(op){ return "Leé otra vez: «"+op+"». ¿Está en el dibujo?"; }, function(){
+        toks[0].t = e.q; marcar(toks[0]); toks[1].ahora = true; pintar();
+        avisar(av,"¡Sí! Ahora, ¿qué hace "+e.q+"?","bien");
+        setTimeout(pasoHace, 700);
+      });
+    }
+    function pasoHace(){
+      avisar(av,"¿Qué hace "+e.q+"? Leé las tres y mirá el dibujo.");
+      opciones([e.h].concat(e.hx), e.h, function(op){ return "Leé cómo queda: «"+mayus(e.q)+" "+op+".» ¿Es lo que muestra el dibujo?"; }, function(){
+        toks[1].t = e.h; marcar(toks[1]); pintar(); flaca = engTexto(toks);
+        avisar(av,"¡Ya es una oración! Dice quién y qué hace. Leela en voz alta: es una oración flaca.","bien");
+        zona.innerHTML = ""; zona.appendChild(el("div",{class:"acciones"},[boton("¡A engordarla!","prim grande",pasoComo)]));
+      });
+    }
+    function pasoComo(){
+      avisar(av,"¿Cómo es "+e.q+"? Leé las tres y mirá el dibujo.");
+      opciones([e.c].concat(e.cx), e.c, function(op){ return "Leé cómo queda: «"+mayus(e.q)+" "+op+"». ¿Así es en el dibujo?"; }, function(){
+        pend = {tok:{k:"como",t:e.c}, fallos:0, sig:despuesComo,
+          ok:function(pos){ return pos===1; },
+          pista:"«"+e.c+"» dice cómo es "+e.q+": va pegado a «"+e.q+"», antes de lo que hace."};
+        avisar(av,"¡Sí! Ahora tocá el + donde va «"+e.c+"».","bien"); pintar();
+      });
+    }
+    function despuesComo(){
+      avisar(av,"¡Muy bien! Leé cómo quedó: ya dice cómo es "+e.q+".","bien");
+      zona.innerHTML = ""; zona.appendChild(el("div",{class:"acciones"},[boton("Seguir","prim grande",pasoDonde)]));
+    }
+    function pasoDonde(){
+      avisar(av,"¿Dónde? Leé las tres y mirá el dibujo.");
+      opciones([e.d].concat(e.dx), e.d, function(op){ return "Leé cómo queda: «"+mayus(e.q)+" "+e.c+" "+e.h+" "+op+".» ¿Es lo que muestra el dibujo?"; }, function(){
+        pend = {tok:{k:"donde",t:e.d}, fallos:0, sig:fin,
+          ok:function(pos){ return pos===0 || pos===toks.length; },
+          pista:"«"+e.d+"» cuenta dónde. Va al final de la oración, o al principio."};
+        avisar(av,"¡Sí! Ahora tocá el + donde va «"+e.d+"».","bien"); pintar();
+      });
+    }
+    function fin(){
+      n++; p.prog(n);
+      orac.replaceWith(el("div",{class:"antesahora"},[
+        el("p",{},[el("small",{text:"Oración flaca"}), flaca]),
+        el("p",{class:"ahora"},[el("small",{text:"Oración engordada"}), engTexto(toks)])
+      ]));
+      avisar(av,"¡Engordaste la oración! Leé las dos en voz alta. ¿Cuál cuenta más del dibujo?","bien");
+      zona.innerHTML = ""; zona.appendChild(el("div",{class:"acciones"},[boton("Siguiente","prim grande",ronda)]));
+    }
+  }
+}
+
+/* ================= 13. ¿Uno o muchos? (N1) ================= */
+/* Yo amo aprender 1.º, pp. 31 y 32 (frases y dibujos: el sol, los leones, el mono / los monos);
+   Yo amo enseñar 1.º: singular, plural y artículos, primero desde la oralidad. */
+var UNO_MUCHOS = [{w:"oso",g:"m",pl:"osos"},{w:"ola",g:"f",pl:"olas"},{w:"mesa",g:"f",pl:"mesas"},{w:"isla",g:"f",pl:"islas"},{w:"lima",g:"f",pl:"limas"},{w:"sol",g:"m",pl:"soles"}];
+function unoMuchos(){
+  if(nivel!==1){ var p0 = pantalla("¿Uno o muchos?","",0); vacio(p0,"Este juego es para el nivel 1."); return; }
+  var items = mezclar(UNO_MUCHOS), planes = mezclar([true,false,true,false,true,false]), n = 0;
+  var p = pantalla("¿Uno o muchos?","Miramos el dibujo: ¿hay uno o hay muchos? Leemos las tres y tocamos la que dice lo que vemos.", items.length);
+  nombramos(p, items.map(function(x){ return x.w; }), ronda);
+  function ronda(){
+    if(n>=items.length){ terminar(p,"Leíste todas las frases.",unoMuchos); return; }
+    var it = items[n], pl = planes[n], m = it.g==="m";
+    var uno = (m?"el ":"la ")+it.w, muchos = (m?"los ":"las ")+it.pl;
+    var buena = pl ? muchos : uno, otra = pl ? uno : muchos;
+    var mal = pl ? (m?"las ":"los ")+it.pl : (m?"la ":"el ")+it.w;
+    var hecho = false;
+    p.mesa.innerHTML = "";
+    var av = aviso(); avisar(av,"¿Hay uno o hay muchos? Leé las tres.");
+    var dib = pl ? el("div",{class:"carta muchos"},[dibujo(it.w),dibujo(it.w),dibujo(it.w)]) : carta(it.w);
+    var ops = el("div",{class:"opciones"});
+    mezclar([buena, otra, mal]).forEach(function(op){
+      var b = el("button",{class:"palabra",type:"button",text:op});
+      b.addEventListener("click", function(){
+        if(hecho || b.classList.contains("mal")) return;
+        if(op===buena){ hecho = true; n++; p.prog(n); b.classList.add("ok"); avisar(av,"¡Muy bien! Ahora leé las tres en voz alta con tu compañero o compañera.","bien"); p.mesa.appendChild(el("div",{class:"acciones"},[boton("Siguiente","prim grande",ronda)])); }
+        else if(op===otra){ b.classList.add("mal"); sacudir(b); avisar(av,"Mirá el dibujo: ¿hay uno o hay muchos?","pista"); }
+        else { b.classList.add("mal"); sacudir(b); avisar(av,"Leé en voz alta: «"+op+"». ¿Suena bien?","pista"); }
+      });
+      ops.appendChild(b);
+    });
+    p.mesa.appendChild(av);
+    p.mesa.appendChild(el("div",{class:"par"},[el("div",{class:"centro"},[dib]), ops]));
+  }
+}
+
+/* ================= 14. Engordo la frase (N2) ================= */
+/* Yo amo enseñar 1.º (escribir frases a partir de imágenes: un ganso, una foca); Yo amo aprender 1.º, p. 76
+   (¿de qué color son las plumas del tucán?); Yo amo aprender 2.º, p. 50 (palabras para nombrar y describir). */
+var COLORES = {
+  rojo:{m:"rojo",f:"roja",D:"#B8231D",L:"#EA5A47"}, azul:{m:"azul",f:"azul",D:"#1E50A0",L:"#61B2E4"},
+  amarillo:{m:"amarillo",f:"amarilla",D:"#E0A100",L:"#FCEA2B"}, rosa:{m:"rosa",f:"rosa",D:"#D45D7E",L:"#FFA7C0"},
+  violeta:{m:"violeta",f:"violeta",D:"#6E3F99",L:"#A77BD0"}
+};
+var FRASE_OBJ = [
+  {w:"auto",g:"m",map:{"#ea5a47":"L"}}, {w:"bota",g:"f",map:{"#6a462f":"D","#a57939":"L"}},
+  {w:"zapato",g:"m",map:{"#a57939":"L"}}, {w:"taza",g:"f",map:{"#fff":"L","#d0cfce":"D"}}, {w:"vela",g:"f",map:{"#ffffff":"L","#d0cfce":"D"}},
+  {w:"silla",g:"f",map:{"#fcea2b":"L","#f1b31c":"D"}}
+];
+function pintado(o, c){
+  var s = decodeURIComponent(IMG[o.w].replace(/^data:image\/svg\+xml,/,""));
+  Object.keys(o.map).forEach(function(h){ s = s.replace(new RegExp(h+"(?![0-9a-f])","gi"), COLORES[c][o.map[h]]); });
+  return "data:image/svg+xml,"+encodeURIComponent(s);
+}
+function engordoFrase(){
+  if(nivel!==2){ var p0 = pantalla("Engordo la frase","",0); vacio(p0,"Este juego es para el nivel 2."); return; }
+  var items = mezclar(FRASE_OBJ), cols = Object.keys(COLORES), n = 0;
+  var p = pantalla("Engordo la frase","Miramos el dibujo y leemos la frase. Contestamos «¿cómo es?» para que la frase diga más.", items.length);
+  ronda();
+  function ronda(){
+    if(n>=items.length){ terminar(p,"Engordaste todas las frases.",engordoFrase); return; }
+    var o = items[n], m = o.g==="m", art = m ? "el" : "la";
+    var opc = mezclar(cols).slice(0,3), c = azar(opc);
+    var adj = function(k){ return COLORES[k][m?"m":"f"]; };
+    var toks = [art, o.w], pend = false, fallos = 0, hecho = false;
+    p.mesa.innerHTML = "";
+    var dib = el("div",{class:"carta grande"},[el("img",{class:"dibujo",src:pintado(o,c),alt:"",draggable:"false"})]);
+    var fr = el("div",{class:"oracion"}), av = aviso(), zona = el("div",{class:"zona"});
+    p.mesa.appendChild(el("div",{class:"centro"},[dib])); p.mesa.appendChild(fr); p.mesa.appendChild(av); p.mesa.appendChild(zona);
+    pintar();
+    avisar(av,"Leé la frase: dice quién, pero no cómo es. ¿Cómo es "+art+" "+o.w+"? Mirá el dibujo y elegí.");
+    var fila = el("div",{class:"opsfila"});
+    opc.forEach(function(k){
+      var b = el("button",{class:"frase",type:"button",text:adj(k)});
+      b.addEventListener("click", function(){
+        if(hecho || b.classList.contains("mal")) return;
+        if(k===c){ hecho = true; b.classList.add("ok"); pend = true; pintar(); avisar(av,"¡Sí! Ahora tocá el + donde va «"+adj(c)+"».","bien"); }
+        else { b.classList.add("mal"); sacudir(b); avisar(av,"Mirá el dibujo: ¿de qué color es "+art+" "+o.w+"?","pista"); }
+      });
+      fila.appendChild(b);
+    });
+    zona.appendChild(fila);
+    function pintar(){
+      fr.innerHTML = "";
+      for(var pos=0; pos<=toks.length; pos++){
+        if(pend) fr.appendChild(hueco(pos));
+        if(pos<toks.length) fr.appendChild(el("span",{class:"w"+(pos===2?" nueva":""),text:toks[pos]}));
+      }
+    }
+    function hueco(pos){
+      var b = el("button",{class:"hueco",type:"button","aria-label":"poner acá",text:"+"});
+      b.addEventListener("click", function(){
+        if(pos===2){
+          var flaca = art+" "+o.w; toks.push(adj(c)); pend = false; n++; p.prog(n);
+          fr.replaceWith(el("div",{class:"antesahora"},[
+            el("p",{},[el("small",{text:"Frase flaca"}), flaca]),
+            el("p",{class:"ahora"},[el("small",{text:"Frase engordada"}), toks.join(" ")])
+          ]));
+          avisar(av,"¡Muy bien! Leé las dos en voz alta. Son frases: dicen quién y cómo es, pero no qué hace.","bien");
+          zona.innerHTML = ""; zona.appendChild(el("div",{class:"acciones"},[boton("Siguiente","prim grande",ronda)]));
+        } else {
+          fallos++; sacudir(b);
+          var prueba = toks.slice(); prueba.splice(pos,0,adj(c));
+          if(fallos===1) avisar(av,"Leé cómo quedaría: «"+prueba.join(" ")+"». ¿Suena bien? Probá en otro +.","pista");
+          else avisar(av,"La palabra que dice cómo es va después de la palabra que nombra: después de «"+o.w+"».","pista");
+        }
+      });
+      return b;
+    }
+  }
+}
+
+/* ================= 15. Ordeno la oración (N2 y N3) ================= */
+/* Yo amo aprender 2.º, p. 25: ordenar las palabras para que la oración tenga sentido, con mayúscula y punto.
+   En N3, algunas oraciones se pueden ordenar de dos maneras: el dibujo dice cuál es. */
+var ORDENO = {
+  2:[
+    {w:["el","mono","come","bananas"], dib:[{k:"mono",x:38,b:96,h:60},{k:"banana",x:74,b:92,h:30}]},
+    {w:["la","vaca","da","leche"], dib:[{k:"vaca",x:50,b:96,h:66}]},
+    {w:["el","pato","nada"], dib:[{agua:70},{k:"pato",x:50,b:80,h:46,z:1}]},
+    {w:["la","abeja","hace","miel"], dib:[{k:"abeja",x:36,b:66,h:42},{k:"miel",x:72,b:96,h:40}]},
+    {w:["el","conejo","come","zanahoria"], dib:[{k:"conejo",x:36,b:96,h:56},{k:"zanahoria",x:74,b:94,h:36}]},
+    {w:["el","ratón","come","queso"], dib:[{k:"ratón",x:36,b:96,h:46},{k:"queso",x:72,b:94,h:34}]}
+  ],
+  3:[
+    {w:["el","perro","persigue","al","gato"], alt:[["el","gato","persigue","al","perro"]],
+     dib:[{k:"gato",x:28,b:96,h:40,flip:true},{k:"perro",x:70,b:96,h:46}]},
+    {w:["el","gato","persigue","al","ratón"], alt:[["el","ratón","persigue","al","gato"]],
+     dib:[{k:"ratón",x:26,b:96,h:30},{k:"gato",x:66,b:96,h:44,flip:true}]},
+    {w:["el","cocodrilo","persigue","al","pato"], alt:[["el","pato","persigue","al","cocodrilo"]],
+     dib:[{agua:70},{k:"pato",x:26,b:80,h:36,z:1},{k:"cocodrilo",x:68,b:78,h:40,z:1}]},
+    {w:["la","bruja","vuela","sobre su escoba"], donde:3, esc:0},
+    {w:["el","tren","frena","en la estación"], donde:3, esc:4},
+    {w:["el","dragón","vuela","sobre el castillo"], donde:3, esc:1},
+    {w:["el","tigre","descansa","debajo del árbol"], donde:3, esc:7},
+    {w:["la","cabra","trepa","por las piedras"], donde:3, esc:6}
+  ]
+};
+function ordTexto(ws, donde){
+  return ws.map(function(x,i){ var t = i===0 ? mayus(x) : x; if(donde && x===donde && i===0) t += ","; return t; }).join(" ")+".";
+}
+function ordeno(){
+  var D = ORDENO[nivel];
+  if(!D){ var p0 = pantalla("Ordeno la oración","",0); vacio(p0,"Este juego es para los niveles 2 y 3."); return; }
+  var items;
+  if(nivel===3){ var pers = mezclar(D.filter(function(x){ return x.alt; })).slice(0,2), otras = mezclar(D.filter(function(x){ return !x.alt; })).slice(0,3); items = mezclar(pers.concat(otras)); }
+  else items = mezclar(D).slice(0,5);
+  var n = 0;
+  var p = pantalla("Ordeno la oración","Miramos el dibujo. Tocamos las palabras en orden para armar la oración. Si nos equivocamos, tocamos la palabra para sacarla.", items.length);
+  ronda();
+  function ronda(){
+    if(n>=items.length){ terminar(p,"Ordenaste todas las oraciones.",ordeno); return; }
+    var it = items[n], donde = it.donde!=null ? it.w[it.donde] : null;
+    var buenas = [it.w];
+    if(donde){ var otra = [donde].concat(it.w.filter(function(x){ return x!==donde; })); buenas.push(otra); }
+    var puestas = [], hecho = false;
+    var fichas = mezclar(it.w.map(function(x,i){ return {t:x,id:i}; }));
+    p.mesa.innerHTML = "";
+    var dibu = it.esc!=null ? engEscena(ENG_ESCENAS[it.esc]) : engEscena({dib:it.dib});
+    var linea = el("div",{class:"oracion linea"}), av = aviso(), bandeja = el("div",{class:"opsfila"});
+    p.mesa.appendChild(dibu); p.mesa.appendChild(linea); p.mesa.appendChild(av); p.mesa.appendChild(bandeja);
+    avisar(av,"¿Con qué palabra empieza la oración? Tocala.");
+    var botones = fichas.map(function(f){
+      var b = el("button",{class:"frase",type:"button",text:f.t});
+      b.addEventListener("click", function(){ if(hecho || b.disabled) return; puestas.push(f); b.disabled = true; b.classList.add("usada"); pintar(); revisar(); });
+      bandeja.appendChild(b); return b;
+    });
+    pintar();
+    function pintar(){
+      linea.innerHTML = "";
+      if(!puestas.length){ linea.appendChild(el("span",{class:"falta",text:"…"})); return; }
+      var ws = puestas.map(function(f){ return f.t; });
+      puestas.forEach(function(f,i){
+        var t = i===0 ? mayus(f.t) : f.t; if(donde && f.t===donde && i===0) t += ",";
+        var s = el("button",{class:"w puesta",type:"button",text:t});
+        s.addEventListener("click", function(){ if(hecho) return; puestas.splice(i,1); botones[fichas.indexOf(f)].disabled = false; botones[fichas.indexOf(f)].classList.remove("usada"); pintar(); avisar(av,"Seguí ordenando."); });
+        linea.appendChild(s);
+      });
+      if(puestas.length===it.w.length){ var ult = linea.lastChild; linea.removeChild(ult); linea.appendChild(el("span",{class:"junto-punto"},[ult, el("span",{class:"w punto",text:"."})])); }
+    }
+    function igual(a,b){ return a.length===b.length && a.every(function(x,i){ return x===b[i]; }); }
+    function revisar(){
+      if(puestas.length<it.w.length){ if(puestas.length===1) avisar(av,"¡Bien! Empieza con mayúscula. ¿Qué palabra sigue?"); return; }
+      var ws = puestas.map(function(f){ return f.t; }), txt = ordTexto(ws, donde);
+      if(buenas.some(function(b){ return igual(b,ws); })){
+        hecho = true; n++; p.prog(n); linea.classList.add("bien");
+        var extra = donde && ws[0]===donde ? " También se puede decir: «"+ordTexto(it.w, donde)+"»" : (donde ? " También se puede empezar por «"+donde+"»." : "");
+        avisar(av,"¡Muy bien! Leé la oración en voz alta: empieza con mayúscula y termina con punto."+extra,"bien");
+        p.mesa.appendChild(el("div",{class:"acciones"},[boton("Siguiente","prim grande",ronda)]));
+      } else if(it.alt && it.alt.some(function(b){ return igual(b,ws); })){
+        avisar(av,"Leé lo que armaste: «"+txt+"» Suena bien, pero ¿es lo que muestra el dibujo? ¿Quién corre atrás de quién? Tocá palabras para sacarlas y cambiá el orden.","pista");
+      } else {
+        avisar(av,"Leé lo que armaste en voz alta: «"+txt+"» ¿Suena bien? Tocá una palabra para sacarla y probá otro orden.","pista");
+      }
+    }
+  }
+}
+
+/* ================= 16. ¿Cómo se hace la letra? (trazado) ================= */
+/* Orientaciones docentes de «¡Vamos a leer y a escribir!» (2.º grado): modelar el trazado con indicaciones sobre el
+   recorrido de cada letra; trazar primero con el dedo y después con el lápiz, siguiendo las flechas.
+   La cursiva usa los puntos de la letra del cuadernillo; el recorrido sigue el triángulo y las flechas del modelo.
+   En cursiva se arranca desde el renglón, porque la letra viene enlazada de la anterior. */
+var TRAZO_CUR = {"a":{"dots":[[4,128],[14,196],[50,254],[62,14],[290,205],[292,275],[107,288],[236,292],[175,297],[289,131],[127,6],[341,18],[405,23],[191,30],[17,62],[299,64],[247,68],[456,74]],"strokes":[[[17,62],[4,128],[14,196],[50,254],[107,288],[175,297],[236,292],[292,275],[236,292],[175,297],[107,288],[50,254],[14,196],[4,128],[17,62],[62,14],[127,6],[191,30],[247,68],[289,131],[290,205],[292,275],[290,205],[289,131],[299,64],[341,18],[405,23],[456,74]]],"adv":485,"ext":[[9,12]]},"i":{"dots":[[129,296],[144,30],[129,229],[137,433],[129,160],[198,6],[257,41],[129,88],[291,92],[49,30],[85,70],[111,114]],"strokes":[[[49,30],[85,70],[111,114],[129,160],[129,229],[129,296],[129,229],[129,160],[129,88],[144,30],[198,6],[257,41],[291,92]],[[137,433]]],"adv":302,"ext":[[-31,2],[11,10]],"enl":[[34,141],[64,198],[95,254],[129,296],[129,229],[129,160],[129,88],[144,30],[198,6],[257,41],[291,92]],"enlDots":[[34,141],[64,198],[95,254],[129,296],[144,30],[129,229],[137,433],[129,160],[198,6],[257,41],[129,88],[291,92]]},"o":{"dots":[[180,172],[212,282],[222,16],[276,60],[36,67],[305,114],[304,184],[24,199],[143,227],[273,240],[64,260],[135,288],[13,135],[237,136],[157,5],[89,19],[377,109]],"strokes":[[[36,67],[13,135],[24,199],[64,260],[135,288],[212,282],[273,240],[212,282],[135,288],[64,260],[24,199],[13,135],[36,67],[89,19],[157,5],[222,16],[276,60],[305,114],[304,184],[273,240],[212,282],[135,288],[143,227],[180,172],[237,136],[305,114],[377,109]]],"adv":417,"ext":[[28,12]]},"u":{"dots":[[13,296],[273,296],[288,30],[236,116],[13,229],[273,229],[13,160],[273,160],[342,6],[81,7],[144,32],[35,38],[401,41],[194,69],[273,88],[447,89],[13,95]],"strokes":[[[13,296],[13,229],[13,160],[13,95],[35,38],[81,7],[144,32],[194,69],[236,116],[273,160],[273,229],[273,296],[273,229],[273,160],[273,88],[288,30],[342,6],[401,41],[447,89]]],"adv":460,"ext":[[-62,40],[-40,120],[-14,205]]},"l":{"dots":[[52,204],[93,260],[198,432],[93,460],[93,592],[109,140],[97,197],[140,310],[93,326],[169,367],[93,393],[214,504],[93,526],[216,576],[13,151],[204,8],[153,38],[254,43],[128,84],[293,88],[208,645],[113,659],[167,676]],"strokes":[[[13,151],[52,204],[93,260],[140,310],[169,367],[198,432],[214,504],[216,576],[208,645],[167,676],[113,659],[93,592],[93,526],[93,460],[93,393],[93,326],[93,260],[97,197],[109,140],[128,84],[153,38],[204,8],[254,43],[293,88]]],"adv":307,"ext":[[-61,51],[-24,101]]},"m":{"dots":[[196,128],[385,128],[13,142],[568,250],[188,250],[472,261],[524,290],[156,296],[343,296],[696,45],[575,184],[196,189],[385,189],[52,207],[427,225],[239,231],[377,250],[94,261],[287,270],[196,7],[385,7],[645,8],[588,9],[575,63],[196,68],[385,68],[735,88],[575,122]],"strokes":[[[13,142],[52,207],[94,261],[156,296],[188,250],[196,189],[196,128],[196,68],[196,7],[196,68],[196,128],[196,189],[239,231],[287,270],[343,296],[377,250],[385,189],[385,128],[385,68],[385,7],[385,68],[385,128],[385,189],[427,225],[472,261],[524,290],[568,250],[575,184],[575,122],[575,63],[588,9],[645,8],[696,45],[735,88]]],"adv":749,"ext":[[-51,36],[-19,89]]},"s":{"dots":[[142,16],[371,108],[258,120],[231,186],[50,196],[181,234],[84,256],[138,280],[107,321],[13,136],[268,25],[201,30],[325,64],[251,67]],"strokes":[[[13,136],[50,196],[84,256],[107,321],[138,280],[181,234],[231,186],[258,120],[251,67],[201,30],[142,16],[201,30],[268,25],[325,64],[371,108]]],"adv":371,"ext":[[-53,30],[-20,83]]},"n":{"dots":[[198,188],[190,249],[512,45],[391,184],[52,207],[242,233],[384,249],[94,261],[289,268],[158,296],[348,296],[13,142],[461,8],[198,9],[404,9],[391,63],[198,64],[551,88],[391,122],[198,124]],"strokes":[[[13,142],[52,207],[94,261],[158,296],[190,249],[198,188],[198,124],[198,64],[198,9],[198,64],[198,124],[198,188],[242,233],[289,268],[348,296],[384,249],[391,184],[391,122],[391,63],[404,9],[461,8],[512,45],[551,88]]],"adv":565,"ext":[[-51,36],[-19,89]]},"p":{"dots":[[126,224],[178,228],[379,16],[127,-285],[127,-209],[60,198],[91,255],[220,278],[284,299],[124,302],[340,129],[29,141],[126,147],[127,-7],[437,39],[127,-72],[127,-138],[341,62],[126,70],[483,83],[342,195],[336,265]],"strokes":[[[29,141],[60,198],[91,255],[124,302],[126,224],[126,147],[126,70],[127,-7],[127,-72],[127,-138],[127,-209],[127,-285],[127,-209],[127,-138],[127,-72],[127,-7],[126,70],[126,147],[178,228],[220,278],[284,299],[336,265],[342,195],[340,129],[341,62],[379,16],[437,39],[483,83]]],"adv":502,"ext":[[-31,33],[-1,87]]},"t":{"dots":[[233,42],[98,240],[98,289],[-17,346],[42,346],[160,346],[219,346],[98,347],[98,411],[98,459],[98,167],[175,4],[113,32],[281,94],[98,98]],"strokes":[[[98,98],[98,167],[98,240],[98,289],[98,347],[98,411],[98,459],[98,411],[98,347],[98,289],[98,240],[98,167],[98,98],[113,32],[175,4],[233,42],[281,94]],[[-17,346],[42,346],[98,347],[160,346],[219,346]]],"adv":316,"ext":[[8,8],[53,53]],"enl":[[22,145],[63,194],[98,240],[98,289],[98,347],[98,411],[98,459],[98,411],[98,347],[98,289],[98,240],[98,167],[98,98],[113,32],[175,4],[233,42],[281,94]],"enlDots":[[63,194],[233,42],[98,240],[98,289],[-17,346],[42,346],[160,346],[219,346],[98,347],[98,411],[98,459],[22,145],[98,167],[175,4],[113,32],[281,94],[98,98]]},"d":{"dots":[[106,290],[48,253],[126,5],[412,24],[15,60],[458,76],[288,189],[15,196],[288,259],[239,288],[174,296],[288,329],[288,399],[288,469],[288,539],[5,129],[346,2],[59,14],[189,29],[301,52],[246,69],[288,119],[288,609],[288,674]],"strokes":[[[15,60],[5,129],[15,196],[48,253],[106,290],[174,296],[239,288],[288,259],[239,288],[174,296],[106,290],[48,253],[15,196],[5,129],[15,60],[59,14],[126,5],[189,29],[246,69],[288,119],[288,189],[288,259],[288,329],[288,399],[288,469],[288,539],[288,609],[288,674],[288,609],[288,539],[288,469],[288,399],[288,329],[288,259],[288,189],[288,119],[301,52],[346,2],[412,24],[458,76]]],"adv":488,"ext":[[7,12]]},"f":{"dots":[[113,-236],[52,204],[198,432],[93,460],[93,592],[262,88],[214,-297],[147,-294],[246,-243],[97,189],[93,254],[140,310],[93,323],[169,367],[93,393],[214,504],[93,526],[216,576],[254,-176],[100,-162],[13,151],[100,-23],[156,2],[100,47],[206,-46],[242,-106],[100,-93],[209,64],[100,117],[208,645],[113,659],[167,676],[118,30],[80,62],[42,70],[20,45],[36,12],[78,2],[125,18],[175,48]],"strokes":[[[13,151],[52,204],[93,254],[140,310],[169,367],[198,432],[214,504],[216,576],[208,645],[167,676],[113,659],[93,592],[93,526],[93,460],[93,393],[93,323],[93,254],[97,189],[100,117],[100,47],[100,-23],[100,-93],[100,-162],[113,-236],[147,-294],[214,-297],[246,-243],[254,-176],[242,-106],[206,-46],[156,2],[118,30],[80,62],[42,70],[20,45],[36,12],[78,2],[125,18],[175,48],[209,64],[262,88]]],"adv":297,"ext":[[-61,51],[-24,101]]},"r":{"dots":[[142,278],[34,187],[156,33],[156,100],[195,234],[68,249],[93,313],[-1,127],[175,167],[215,5],[279,32],[327,82]],"strokes":[[[-1,127],[34,187],[68,249],[93,313],[142,278],[195,234],[175,167],[156,100],[156,33],[215,5],[279,32],[327,82]]],"adv":343,"ext":[[-63,19],[-32,73]]},"c":{"dots":[[10,191],[238,281],[106,284],[172,290],[228,12],[33,56],[43,251],[160,0],[90,15],[292,39],[339,84],[6,121]],"strokes":[[[33,56],[6,121],[10,191],[43,251],[106,284],[172,290],[238,281],[172,290],[106,284],[43,251],[10,191],[6,121],[33,56],[90,15],[160,0],[228,12],[292,39],[339,84]]],"adv":368,"ext":[[25,12]]},"b":{"dots":[[52,204],[346,216],[93,260],[140,310],[198,432],[93,460],[93,592],[109,140],[97,197],[346,267],[93,326],[169,367],[93,393],[214,504],[93,526],[216,576],[13,151],[336,162],[201,6],[254,17],[153,38],[291,61],[128,84],[320,108],[208,645],[113,659],[167,676],[348,305],[396,306],[440,306]],"strokes":[[[13,151],[52,204],[93,260],[140,310],[169,367],[198,432],[214,504],[216,576],[208,645],[167,676],[113,659],[93,592],[93,526],[93,460],[93,393],[93,326],[93,260],[97,197],[109,140],[128,84],[153,38],[201,6],[254,17],[291,61],[320,108],[336,162],[346,216],[346,267],[348,305],[348,305],[396,306],[440,306]]],"adv":485,"ext":[[-61,51],[-24,101]],"alta":true},"v":{"dots":[[250,14],[14,140],[52,204],[190,246],[94,258],[198,184],[373,198],[158,294],[210,61],[198,122],[317,10],[363,50],[391,101],[378,302],[420,306],[462,306]],"strokes":[[[14,140],[52,204],[94,258],[158,294],[190,246],[198,184],[198,122],[210,61],[250,14],[317,10],[363,50],[391,101],[373,198],[378,302],[378,302],[420,306],[462,306]]],"adv":571,"ext":[[-50,34],[-18,87]],"alta":true,"cerca":true},"g":{"dots":[[104,-216],[5,182],[220,292],[331,40],[224,-48],[38,48],[195,-296],[130,-278],[254,-267],[276,-210],[276,202],[34,254],[276,272],[91,288],[159,297],[127,-151],[276,128],[276,-7],[103,24],[176,30],[276,-72],[276,-139],[175,-95],[276,61],[231,68],[375,86],[10,109]],"strokes":[[[38,48],[10,109],[5,182],[34,254],[91,288],[159,297],[220,292],[276,272],[220,292],[159,297],[91,288],[34,254],[5,182],[10,109],[38,48],[103,24],[176,30],[231,68],[276,128],[276,202],[276,272],[276,202],[276,128],[276,61],[276,-7],[276,-72],[276,-139],[276,-210],[254,-267],[195,-296],[130,-278],[104,-216],[127,-151],[175,-95],[224,-48],[276,-7],[331,40],[375,86]]],"adv":407,"ext":[[30,12]]},"j":{"dots":[[46,-296],[104,-267],[126,224],[126,436],[26,-94],[-19,-278],[-45,-215],[127,-209],[124,302],[-22,-150],[126,147],[127,-7],[179,41],[127,-72],[74,-48],[127,-138],[126,70],[226,93],[46,30],[82,70],[108,114]],"strokes":[[[46,30],[82,70],[108,114],[126,147],[126,224],[124,302],[126,224],[126,147],[126,70],[127,-7],[127,-72],[127,-138],[127,-209],[104,-267],[46,-296],[-19,-278],[-45,-215],[-22,-150],[26,-94],[74,-48],[127,-7],[179,41],[226,93]],[[126,436]]],"adv":251,"ext":[[-34,2],[8,10]]},"ñ":{"dots":[[198,188],[190,249],[512,45],[391,184],[52,207],[242,233],[384,249],[94,261],[289,268],[158,296],[348,296],[347,385],[191,405],[295,405],[399,406],[243,424],[13,142],[461,8],[198,9],[404,9],[391,63],[198,64],[551,88],[391,122],[198,124]],"strokes":[[[13,142],[52,207],[94,261],[158,296],[190,249],[198,188],[198,124],[198,64],[198,9],[198,64],[198,124],[198,188],[242,233],[289,268],[348,296],[384,249],[391,184],[391,122],[391,63],[404,9],[461,8],[512,45],[551,88]],[[191,405],[243,424],[295,405],[347,385],[399,406]]],"adv":565,"ext":[[-51,36],[-19,89]]},"y":{"dots":[[310,20],[266,-157],[429,284],[160,293],[429,-2],[317,-104],[368,-55],[248,13],[13,140],[343,-297],[278,-279],[402,-269],[250,-217],[429,-209],[52,204],[429,212],[190,236],[94,258],[429,141],[190,171],[482,45],[203,50],[429,-65],[429,-137],[354,59],[429,70],[529,97],[395,102],[190,107]],"strokes":[[[13,140],[52,204],[94,258],[160,293],[190,236],[190,171],[190,107],[203,50],[248,13],[310,20],[354,59],[395,102],[429,141],[429,212],[429,284],[429,212],[429,141],[429,70],[429,-2],[429,-65],[429,-137],[429,-209],[402,-269],[343,-297],[278,-279],[250,-217],[266,-157],[317,-104],[368,-55],[429,-2],[482,45],[529,97]]],"adv":563,"ext":[[-51,34],[-19,87]]},"h":{"dots":[[328,184],[52,204],[93,260],[179,266],[198,432],[93,460],[93,592],[340,9],[328,63],[93,70],[488,88],[328,122],[93,194],[134,232],[321,249],[233,294],[285,296],[140,310],[93,326],[169,367],[93,393],[214,504],[93,526],[216,576],[93,132],[13,151],[398,8],[93,10],[449,45],[208,645],[113,659],[167,676]],"strokes":[[[13,151],[52,204],[93,260],[140,310],[169,367],[198,432],[214,504],[216,576],[208,645],[167,676],[113,659],[93,592],[93,526],[93,460],[93,393],[93,326],[93,260],[93,194],[93,132],[93,70],[93,10],[93,70],[93,132],[93,194],[134,232],[179,266],[233,294],[285,296],[321,249],[328,184],[328,122],[328,63],[340,9],[398,8],[449,45],[488,88]]],"adv":494,"ext":[[-61,51],[-24,101]]},"q":{"dots":[[290,72],[394,84],[236,300],[290,-285],[290,-212],[15,204],[290,214],[176,306],[290,3],[62,22],[290,-142],[290,-70],[192,38],[290,140],[50,263],[292,283],[107,297],[5,136],[127,15],[342,37],[164,-142],[225,-142],[353,-142],[18,71]],"strokes":[[[18,71],[5,136],[15,204],[50,263],[107,297],[176,306],[236,300],[292,283],[236,300],[176,306],[107,297],[50,263],[15,204],[5,136],[18,71],[62,22],[127,15],[192,38],[247,77],[290,140],[290,214],[292,283],[290,214],[290,140],[290,72],[290,3],[290,-70],[290,-142],[290,-212],[290,-285],[290,-212],[290,-142],[290,-70],[312,-20],[342,37],[394,84]],[[164,-142],[225,-142],[290,-142],[353,-142]]],"adv":413,"ext":[[10,12]]},"z":{"dots":[[170,-104],[102,-217],[282,-209],[270,238],[90,274],[231,284],[282,-65],[282,-137],[182,73],[196,-297],[131,-279],[255,-269],[46,221],[156,298],[119,-157],[13,159],[279,172],[276,-7],[240,40],[335,45],[221,-55],[382,97],[244,115]],"strokes":[[[13,159],[46,221],[90,274],[156,298],[231,284],[270,238],[279,172],[244,115],[182,73],[240,40],[276,-7],[282,-65],[282,-137],[282,-209],[255,-269],[196,-297],[131,-279],[102,-217],[119,-157],[170,-104],[221,-55],[276,-7],[335,45],[382,97]]],"adv":416,"ext":[[-45,49],[-16,104]]},"e":{"dots":[[20,128],[81,139],[136,166],[168,215],[141,265],[85,274],[40,232],[16,175],[18,113],[37,56],[82,18],[143,12],[200,33],[246,75],[285,124]],"strokes":[[[20,128],[60,134],[102,143],[157,180],[172,226],[132,277],[84,274],[41,235],[16,174],[16,125],[26,70],[65,21],[132,9],[193,27],[242,70],[291,131]]],"adv":283,"ext":[[-50,20],[-15,75]]},"k":{"dots":[[52,204],[134,231],[93,260],[236,293],[198,432],[93,460],[93,592],[216,107],[154,146],[277,191],[97,197],[292,256],[177,268],[140,310],[93,326],[169,367],[93,393],[214,504],[93,526],[216,576],[95,139],[13,151],[217,159],[304,7],[97,12],[369,22],[252,52],[416,69],[97,74],[208,645],[113,659],[167,676]],"strokes":[[[13,151],[52,204],[93,260],[140,310],[169,367],[198,432],[214,504],[216,576],[208,645],[167,676],[113,659],[93,592],[93,526],[93,460],[93,393],[93,326],[93,260],[97,197],[95,139],[97,74],[97,12],[97,74],[95,139],[134,231],[177,268],[236,293],[292,256],[277,191],[217,159],[154,146],[216,107],[252,52],[304,7],[369,22],[416,69]]],"adv":432,"ext":[[-61,51],[-24,101]]},"w":{"dots":[[312,12],[250,14],[484,14],[366,42],[394,92],[422,124],[14,140],[408,178],[52,204],[190,246],[94,258],[198,184],[158,294],[542,10],[445,60],[210,61],[198,122],[643,212],[643,264],[633,158],[588,50],[616,101],[645,302],[690,306],[735,306]],"strokes":[[[14,140],[52,204],[94,258],[158,294],[190,246],[198,184],[198,122],[210,61],[250,14],[312,12],[366,42],[394,92],[408,178],[422,124],[445,60],[484,14],[542,10],[588,50],[616,101],[633,158],[643,212],[643,264],[645,302],[645,302],[690,306],[735,306]]],"adv":795,"ext":[[-50,34],[-18,87]],"alta":true,"cerca":true},"x":{"dots":[[52,198],[240,198],[414,4],[172,15],[301,70],[223,70],[327,183],[380,239],[95,253],[209,260],[423,292],[153,293],[272,128],[13,137],[347,15],[475,35],[522,88]],"strokes":[[[13,137],[52,198],[95,253],[153,293],[209,260],[240,198],[272,128],[301,70],[347,15],[414,4],[475,35],[522,88]],[[423,292],[380,239],[327,183],[272,128],[223,70],[172,15]]],"adv":549,"ext":[[-53,33],[-20,85]]}};
+var BOWL = "C 215 285 175 300 135 300 C 65 300 25 235 25 155 C 25 70 70 10 135 10 C 180 10 215 35 235 85";
+var TRAZO_IMP = {
+  a:["M 40 255 C 70 310 215 315 220 230 L 220 0","M 220 160 C 160 175 30 165 30 75 C 30 -15 170 -10 220 55"],
+  e:["M 25 150 L 235 150 C 235 255 175 300 130 300 C 60 300 22 235 22 150 C 22 55 75 0 135 0 C 185 0 215 20 235 50"],
+  i:["M 120 300 L 120 0","M 120 420 L 120 421"],
+  o:["M 140 300 C 60 300 20 230 20 150 C 20 60 70 0 140 0 C 210 0 260 60 260 150 C 260 230 220 300 140 300"],
+  u:["M 30 300 L 30 100 C 30 30 70 0 130 0 C 190 0 230 40 230 100 L 230 300 L 230 0"],
+  l:["M 120 680 L 120 0"],
+  m:["M 30 300 L 30 0 L 30 210 C 40 280 90 300 120 300 C 160 300 180 270 180 220 L 180 0 L 180 210 C 190 280 240 300 270 300 C 310 300 330 270 330 220 L 330 0"],
+  s:["M 230 265 C 205 295 160 300 130 300 C 75 300 35 275 35 225 C 35 170 95 160 135 150 C 190 138 240 120 240 70 C 240 20 190 0 135 0 C 85 0 45 15 20 45"],
+  n:["M 30 300 L 30 0 L 30 210 C 40 280 90 300 130 300 C 180 300 210 270 210 210 L 210 0"],
+  p:["M 30 300 L 30 -280 L 30 200 C 50 270 95 300 145 300 C 215 300 255 235 255 150 C 255 60 210 0 145 0 C 95 0 55 30 30 80"],
+  t:["M 100 470 L 100 50 C 100 15 125 0 155 0 C 185 0 205 10 222 25","M 30 300 L 200 300"],
+  d:["M 235 680 L 235 0","M 235 200 C 215 270 175 300 135 300 C 65 300 25 230 25 150 C 25 60 70 0 135 0 C 185 0 220 30 235 80"],
+  f:["M 230 640 C 210 672 185 680 160 680 C 120 680 100 650 100 600 L 100 0","M 30 300 L 210 300"],
+  r:["M 40 300 L 40 0 L 40 200 C 60 270 110 300 175 295"],
+  c:["M 235 255 C 215 290 180 300 140 300 C 70 300 25 230 25 150 C 25 70 70 0 140 0 C 180 0 215 15 240 50"],
+  b:["M 30 680 L 30 0","M 30 200 C 50 270 95 300 145 300 C 215 300 255 235 255 150 C 255 60 210 0 145 0 C 95 0 55 30 30 80"],
+  v:["M 20 300 L 130 0 L 240 300"],
+  g:["M 235 230 "+BOWL,"M 235 300 L 235 -200 C 235 -260 190 -285 135 -285 C 90 -285 55 -265 40 -235"],
+  j:["M 150 300 L 150 -200 C 150 -260 115 -285 70 -285 C 40 -285 20 -270 5 -245","M 150 420 L 150 421"],
+  "ñ":["M 30 300 L 30 0 L 30 210 C 40 280 90 300 130 300 C 180 300 210 270 210 210 L 210 0","M 30 400 C 60 440 90 440 120 410 C 150 380 180 380 210 420"],
+  y:["M 25 300 L 130 20","M 235 300 L 90 -285"],
+  h:["M 30 680 L 30 0 L 30 210 C 40 280 90 300 130 300 C 180 300 210 270 210 210 L 210 0"],
+  q:["M 235 230 "+BOWL,"M 235 300 L 235 -285"],
+  z:["M 25 300 L 235 300 L 25 0 L 240 0"]
+};
+var TRAZO_NIVEL = {
+  1:["a","e","i","o","u","l","m","s"],
+  2:["n","p","t","d","f","r","c","b","v","g","j","ñ","ll","y","ch","qu","z","h"],
+  3:["rr","pl","bl","cl","fl","gl","pr","br","cr","tr","dr","fr","gr"]
+};
+var SVGNS = "http://www.w3.org/2000/svg";
+function sv(tag, at){ var n = document.createElementNS(SVGNS, tag); for(var k in at) n.setAttribute(k, at[k]); return n; }
+function suave(pts){
+  if(pts.length===1) return "M "+pts[0][0]+" "+pts[0][1]+" l 0 1";
+  var d = "M "+pts[0][0]+" "+pts[0][1];
+  for(var i=1;i<pts.length-1;i++){ var mx=(pts[i][0]+pts[i+1][0])/2, my=(pts[i][1]+pts[i+1][1])/2; d += " Q "+pts[i][0]+" "+pts[i][1]+" "+mx+" "+my; }
+  var u = pts[pts.length-1]; return d + " L "+u[0]+" "+u[1];
+}
+function muestras(pts, paso){
+  var out = [pts[0]], resto = 0;
+  for(var i=1;i<pts.length;i++){
+    var a = pts[i-1], b = pts[i], L = Math.hypot(b[0]-a[0], b[1]-a[1]), s = paso - resto;
+    while(s <= L){ out.push([Math.round(a[0]+(b[0]-a[0])*s/L), Math.round(a[1]+(b[1]-a[1])*s/L)]); s += paso; }
+    resto = L - (s - paso);
+  }
+  return out;
+}
+function partesDe(u){ return u==="ll"?["l","l"]:u==="ch"?["c","h"]:u==="qu"?["q","u"]:u==="rr"?["r","r"]:u.split(""); }
+/* cursiva: las letras se enlazan; el trazo principal es uno solo y los puntos, rayitas y la tilde van al final */
+function cursivaDe(u){
+  var x = 0, main = [], extra = [], dots = [], alto = null, cerca = false;
+  partesDe(u).forEach(function(ch,k){
+    var c = TRAZO_CUR[ch], sh = function(p){ return [p[0]+x,p[1]]; };
+    var s = c.strokes.map(function(st){ return st.map(sh); });
+    if(k>0 && c.enl){ s[0] = c.enl.map(sh); }
+    var first = s[0], misDots = (k>0 && c.enlDots ? c.enlDots : c.dots).map(sh);
+    /* la olita de a, c, d, g, q sube directo desde la letra anterior, sin bajar antes */
+    if(k>0 && alto===null && "acdgqo".indexOf(ch)>=0){ var sacado = first[0]; first = first.slice(1); misDots = misDots.filter(function(q){ return !(q[0]===sacado[0] && q[1]===sacado[1]); }); }
+    if(k===0 && c.ext.length){ first = c.ext.map(sh).concat(first); dots = dots.concat(c.ext.map(sh)); }
+    /* después de una letra que engancha arriba (b), la siguiente arranca desde esa altura: escalerita */
+    if(k>0 && alto!==null){
+      var corte = 0; while(corte<first.length-1 && first[corte][1] < alto-20) corte++;
+      var fuera = first.slice(0,corte); first = first.slice(corte);
+      /* escalerita: si la letra siguiente arranca a la misma altura del enganche, sube un escalón antes de seguir */
+
+      misDots = misDots.filter(function(q){ return !fuera.some(function(f){ return f[0]===q[0] && f[1]===q[1]; }); });
+    }
+    if(k>0 && ch==="r" && alto!==null){
+      /* br: la r sale de la b como la l, pero un escalón más arriba; los dos techitos quedan paralelos al renglón */
+      var E = main[main.length-1], ex = E[0], ey = E[1];
+      /* puntos repetidos = esquinas en vértice (sin redondear) */
+      var V1 = [ex+44,ey+78], V2 = [ex+144,ey+78];
+      /* el escaloncito sube en curva (como en bl) y recién arriba hace vértice */
+      first = [[ex+24,ey+3],[ex+36,ey+20],[ex+42,ey+48],V1,V1,[ex+94,ey+78],V2,V2,[ex+150,ey+10],[ex+150,ey-60],[ex+150,ey-130],[ex+150,ey-200],[ex+153,ey-260],[ex+185,ey-298],[ex+240,ey-284],[ex+288,ey-232]];
+      misDots = muestras([E,[ex+24,ey+3],[ex+36,ey+20],[ex+42,ey+48],V1,V2].concat(first.slice(8)), 62);
+    }
+    /* enlaces más cerrados: la i y la t suben pegadas a la letra anterior; después de v y w, la letra siguiente queda cerca */
+    if(k>0 && main.length && (c.enl || cerca)){
+      var E2 = main[main.length-1], dlt = (E2[0] + (c.enl ? 30 : 55)) - first[0][0];
+      if(dlt < 0){
+        var mv = function(q){ return [q[0]+dlt, q[1]]; };
+        first = first.map(mv); misDots = misDots.map(mv);
+        for(var si=1; si<s.length; si++) s[si] = s[si].map(mv);
+        x += dlt;
+      }
+    }
+    main = main.concat(first);
+    s.slice(1).forEach(function(st){ extra.push(st); });
+    dots = dots.concat(misDots);
+    cerca = !!c.cerca;
+    alto = c.alta ? s[0][s[0].length-1][1] : null;
+    x += c.adv;
+  });
+  return {d:[suave(main)].concat(extra.map(suave)), dots:dots};
+}
+function moverD(d, dx){ var i = 0; return d.replace(/-?\d+(\.\d+)?/g, function(n){ var v = parseFloat(n); if(/^[^A-Za-z]*$/.test(n) && (i++ % 2===0)) v += dx; return String(v); }); }
+function imprentaDe(u){
+  var x = 0, out = [];
+  partesDe(u).forEach(function(ch){
+    var ds = TRAZO_IMP[ch], xs = [];
+    ds.forEach(function(d){ var i = 0; d.replace(/-?\d+(\.\d+)?/g, function(n){ if(i++ % 2===0) xs.push(parseFloat(n)); return n; }); });
+    var mn = Math.min.apply(null,xs), mx = Math.max.apply(null,xs), dx = x - mn;
+    ds.forEach(function(d){ out.push(moverD(d, dx)); });
+    x += (mx - mn) + 90;
+  });
+  return out;
+}
+function trazado(){
+  var tipo = "imp", letras = TRAZO_NIVEL[nivel], letra = letras[0], anim = null;
+  var p = pantalla("¿Cómo se hace la letra?","Elegimos la letra. Miramos dónde se empieza y cómo se hace. Después la hacemos en el aire con el dedo y en el cuaderno.", 0);
+  var barra = el("div",{class:"trazbarra"}), tipos = el("div",{class:"chips"}), chips = el("div",{class:"chips"});
+  var caja = el("div",{class:"trazcaja"}), av = aviso(), acc = el("div",{class:"acciones"});
+  p.mesa.appendChild(barra); barra.appendChild(tipos); barra.appendChild(chips);
+  p.mesa.appendChild(caja); p.mesa.appendChild(av); p.mesa.appendChild(acc);
+  [["imp","Imprenta"],["cur","Cursiva"]].forEach(function(t){
+    var b = el("button",{class:"chip ancho",type:"button","aria-pressed":String(t[0]===tipo),text:t[1]});
+    b.addEventListener("click", function(){ tipo = t[0]; [].forEach.call(tipos.children,function(x){ x.setAttribute("aria-pressed",String(x===b)); }); dibujar(); });
+    tipos.appendChild(b);
+  });
+  letras.forEach(function(l){
+    var b = el("button",{class:"chip",type:"button","aria-pressed":String(l===letra),text:l});
+    b.addEventListener("click", function(){ letra = l; [].forEach.call(chips.children,function(x){ x.setAttribute("aria-pressed",String(x===b)); }); dibujar(); });
+    chips.appendChild(b);
+  });
+  acc.appendChild(boton("Ver cómo se hace","prim grande",function(){ dibujar(true); }));
+  acc.appendChild(boton("¿Por dónde empiezo?","grande",function(){ dibujar(false, true); }));
+  dibujar();
+
+  function dibujar(animar, adivina){
+    if(anim){ cancelAnimationFrame(anim); anim = null; }
+    caja.innerHTML = "";
+    var cur = tipo==="cur" ? cursivaDe(letra) : null, ds = cur ? cur.d : imprentaDe(letra);
+    var svg = sv("svg",{viewBox:"-120 -790 720 1110",class:"trazsvg",role:"img","aria-label":(letra.length>1?"Letras ":"Letra ")+letra});
+    var g = sv("g",{transform:"scale(1,-1)"}); svg.appendChild(g);
+    [[680,"lin"],[300,"lin punteada"],[0,"lin"],[-300,"lin punteada"]].forEach(function(r){ g.appendChild(sv("line",{x1:-3000,x2:3000,y1:r[0],y2:r[0],class:r[1]})); });
+    var tmp = sv("g",{}); g.appendChild(tmp);
+    var paths = ds.map(function(d){ var pa = sv("path",{d:d,class:cur?"oculta":"guia"}); tmp.appendChild(pa); return pa; });
+    caja.appendChild(svg);
+    var bb = tmp.getBBox(); var dx = Math.round(240 - (bb.x + bb.width/2));
+    tmp.setAttribute("transform","translate("+dx+",0)");
+    var W = Math.max(720, bb.width+300); svg.setAttribute("viewBox",(240-W/2)+" -790 "+W+" 1110");
+    if(cur) cur.dots.forEach(function(q){ tmp.appendChild(sv("circle",{cx:q[0],cy:q[1],r:13,class:"punto"})); });
+    var p0 = paths[0].getPointAtLength(0), p1 = paths[0].getPointAtLength(Math.min(30, paths[0].getTotalLength()));
+    var ang = Math.atan2(p1.y-p0.y, p1.x-p0.x)*180/Math.PI;
+    var tri = sv("path",{d:"M 0 -26 L 40 0 L 0 26 Z",class:"inicio",transform:"translate("+p0.x+","+p0.y+") rotate("+ang+") translate(-46,0)"});
+    if(!adivina) tmp.appendChild(tri);
+    var pen = sv("g",{}); tmp.appendChild(pen);
+    if(adivina){ preguntar(tmp, paths, tri, pen); return; }
+    var msg = tipo==="cur" ? "En cursiva arrancamos desde el renglón, porque la letra viene enlazada de la anterior." : "El triángulo naranja muestra dónde se empieza.";
+    avisar(av, animar ? "Mirá: empieza en el triángulo y sigue así." : msg+" Tocá «Ver cómo se hace».");
+    if(animar) animarTrazo(paths, pen, function(){ avisar(av,"Ahora hacela vos: primero en el aire con el dedo, después en el cuaderno, diciendo el recorrido en voz alta.","bien"); });
+  }
+  function animarTrazo(paths, pen, listo){
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var tinta = paths.map(function(pa){ var L = pa.getTotalLength(); var t = sv("path",{d:pa.getAttribute("d"),class:"tinta",pathLength:"1","stroke-dasharray":"1 3","stroke-dashoffset":"1"}); pen.appendChild(t); return {t:t,L:L,pa:pa}; });
+    var lapiz = sv("circle",{r:22,class:"lapiz"}); pen.appendChild(lapiz);
+    if(reduce){ tinta.forEach(function(x){ x.t.removeAttribute("stroke-dasharray"); x.t.removeAttribute("stroke-dashoffset"); }); lapiz.remove(); listo(); return; }
+    var k = 0, t0 = null;
+    function paso(ts){
+      if(k>=tinta.length){ lapiz.remove(); anim = null; listo(); return; }
+      var x = tinta[k]; if(t0===null) t0 = ts;
+      var dur = Math.max(1200, x.L/0.55), f = Math.min(1,(ts-t0)/dur);
+      x.t.setAttribute("stroke-dashoffset", 1-f);
+      var q = x.pa.getPointAtLength(x.L*f); lapiz.setAttribute("cx",q.x); lapiz.setAttribute("cy",q.y);
+      if(f>=1){ x.t.removeAttribute("stroke-dasharray"); x.t.removeAttribute("stroke-dashoffset"); k++; t0 = ts + 500; }
+      anim = requestAnimationFrame(function(t){ if(t0!==null && t<t0){ anim = requestAnimationFrame(paso); return; } paso(t); });
+    }
+    anim = requestAnimationFrame(paso);
+  }
+  function preguntar(tmp, paths, tri, pen){
+    var pa = paths[0], L = pa.getTotalLength();
+    var cand = [0, L*0.5, L].map(function(s){ var q = pa.getPointAtLength(s); return {x:q.x,y:q.y,ok:s===0}; });
+    if(paths.length>1){ var u = paths[paths.length-1].getPointAtLength(0); cand[1] = {x:u.x,y:u.y,ok:false}; }
+    avisar(av,"¿Dónde apoyamos el lápiz para empezar? Tocá uno de los puntos naranjas.");
+    var hecho = false;
+    mezclar(cand).forEach(function(c){
+      var b = sv("circle",{cx:c.x,cy:c.y,r:30,class:"cand",tabindex:"0",role:"button","aria-label":"empezar acá"});
+      b.addEventListener("click", function(){
+        if(hecho) return;
+        if(c.ok){ hecho = true; [].slice.call(tmp.querySelectorAll(".cand")).forEach(function(x){ x.remove(); }); tmp.insertBefore(tri, pen); avisar(av,"¡Sí! Ahí se empieza. Mirá cómo sigue.","bien"); animarTrazo(paths, pen, function(){ avisar(av,"¡Muy bien! Ahora hacela en el aire con el dedo y después en el cuaderno.","bien"); }); }
+        else { b.setAttribute("class","cand mal"); avisar(av,"Ahí no empieza. Mirá la letra otra vez: ¿dónde apoyamos el lápiz primero?","pista"); }
+      });
+      tmp.appendChild(b);
+    });
+  }
+}
+
+/* ================= 17. Desafío: el abecedario enlazado ================= */
+/* Todo el abecedario en cursiva sin levantar el lápiz; al final, los puntos de la i y la j, la tilde de la ñ
+   y los palitos de la t, la q y la x. Se mide el tiempo para ganar fluidez y velocidad. */
+var DESAFIO_RENGLONES = ["abcdefghi","jklmnñopq","rstuvwxyz"];
+function desafio(){
+  var anim = null, t0 = null, reloj = null;
+  var p = pantalla("Desafío: el abecedario enlazado","Escribimos todo el abecedario en cursiva sin levantar el lápiz. Al final ponemos los puntos de la i y la j, la tilde de la ñ y los palitos de la t, la q y la x.", 0);
+  var hoja = el("div",{class:"hoja"}), av = aviso(), acc = el("div",{class:"acciones"}), panel = el("div",{class:"desafio"});
+  p.mesa.appendChild(hoja); p.mesa.appendChild(av); p.mesa.appendChild(acc); p.mesa.appendChild(panel);
+  var filas = DESAFIO_RENGLONES.map(function(r){
+    var c = cursivaDe(r);
+    var svg = sv("svg",{class:"trazsvg renglon",role:"img","aria-label":"Letras "+r.split("").join(" ")});
+    var g = sv("g",{transform:"scale(1,-1)"}); svg.appendChild(g);
+    [[680,"lin"],[300,"lin punteada"],[0,"lin"],[-300,"lin punteada"]].forEach(function(x){ g.appendChild(sv("line",{x1:-3000,x2:9000,y1:x[0],y2:x[0],class:x[1]})); });
+    var tmp = sv("g",{}); g.appendChild(tmp);
+    var paths = c.d.map(function(d){ var pa = sv("path",{d:d,class:"oculta"}); tmp.appendChild(pa); return pa; });
+    c.dots.forEach(function(q){ tmp.appendChild(sv("circle",{cx:q[0],cy:q[1],r:13,class:"punto"})); });
+    var pen = sv("g",{}); tmp.appendChild(pen);
+    hoja.appendChild(svg);
+    var bb = tmp.getBBox(); svg.setAttribute("viewBox",(bb.x-90)+" -760 "+(bb.width+180)+" 1090");
+    var p0 = paths[0].getPointAtLength(0), p1 = paths[0].getPointAtLength(30);
+    var ang = Math.atan2(p1.y-p0.y, p1.x-p0.x)*180/Math.PI;
+    tmp.insertBefore(sv("path",{d:"M 0 -26 L 40 0 L 0 26 Z",class:"inicio",transform:"translate("+p0.x+","+p0.y+") rotate("+ang+") translate(-46,0)"}), pen);
+    return {paths:paths, pen:pen};
+  });
+  acc.appendChild(boton("Mirá cómo se hace","grande",mirar));
+  acc.appendChild(boton("¡Acepto el desafío!","prim grande",empezar));
+  avisar(av,"Primero mirá cómo se hace. Después aceptá el desafío y escribilo en tu cuaderno.");
+  mostrarRecord();
+
+  function limpiarTinta(){ if(anim){ cancelAnimationFrame(anim); anim = null; } filas.forEach(function(f){ f.pen.innerHTML = ""; }); }
+  function mirar(){
+    limpiarTinta();
+    /* primero el trazo enlazado de cada renglón; al final, puntos, tilde y palitos */
+    var orden = [];
+    filas.forEach(function(f){ orden.push({pa:f.paths[0], pen:f.pen}); });
+    filas.forEach(function(f){ f.paths.slice(1).forEach(function(pa){ orden.push({pa:pa, pen:f.pen, chico:true}); }); });
+    avisar(av,"Mirá: el lápiz no se levanta en todo el renglón. Los puntos, la tilde y los palitos van al final.");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var k = 0, ts0 = null, pausa = null;
+    var tintas = orden.map(function(o){ var L = o.pa.getTotalLength(); var tt = sv("path",{d:o.pa.getAttribute("d"),class:"tinta",pathLength:"1","stroke-dasharray":"1 3","stroke-dashoffset":"1"}); o.pen.appendChild(tt); return {t:tt,L:L,pa:o.pa,pen:o.pen,chico:o.chico}; });
+    if(reduce){ tintas.forEach(function(x){ x.t.removeAttribute("stroke-dasharray"); x.t.removeAttribute("stroke-dashoffset"); }); fin(); return; }
+    var lapiz = null;
+    function paso(ts){
+      if(pausa!==null && ts<pausa){ anim = requestAnimationFrame(paso); return; }
+      if(k>=tintas.length){ if(lapiz) lapiz.remove(); anim = null; fin(); return; }
+      var x = tintas[k];
+      if(ts0===null){ ts0 = ts; if(lapiz) lapiz.remove(); lapiz = sv("circle",{r:24,class:"lapiz"}); x.pen.appendChild(lapiz); }
+      var dur = x.chico ? 600 : Math.max(2500, x.L/0.9), f = Math.min(1,(ts-ts0)/dur);
+      x.t.setAttribute("stroke-dashoffset", 1-f);
+      var q = x.pa.getPointAtLength(x.L*f); lapiz.setAttribute("cx",q.x); lapiz.setAttribute("cy",q.y);
+      if(f>=1){ x.t.removeAttribute("stroke-dasharray"); x.t.removeAttribute("stroke-dashoffset"); k++; ts0 = null; pausa = ts + (x.chico ? 250 : 600); }
+      anim = requestAnimationFrame(paso);
+    }
+    anim = requestAnimationFrame(paso);
+    function fin(){ avisar(av,"¿Te animás? Tocá «¡Acepto el desafío!» y escribilo en tu cuaderno.","bien"); }
+  }
+  function empezar(){
+    limpiarTinta(); panel.innerHTML = "";
+    t0 = Date.now();
+    var tiempo = el("p",{class:"reloj",text:"0:00"});
+    panel.appendChild(tiempo);
+    panel.appendChild(el("div",{class:"acciones"},[boton("¡Terminé!","prim grande",terminado)]));
+    avisar(av,"¡Ya! Escribí el abecedario en tu cuaderno sin levantar el lápiz. Cuando termines con los puntos y los palitos, tocá «¡Terminé!».");
+    reloj = setInterval(function(){ tiempo.textContent = formato(Date.now()-t0); }, 250);
+  }
+  function terminado(){
+    clearInterval(reloj); var ms = Date.now()-t0; panel.innerHTML = "";
+    var rec = leerRecord(), nuevo = !rec || ms < rec;
+    if(nuevo) guardarRecord(ms);
+    panel.appendChild(el("p",{class:"reloj",text:formato(ms)}));
+    avisar(av, nuevo ? "¡Nuevo récord! Ahora revisá tu abecedario." : "¡Muy bien! Tu mejor tiempo es "+formato(rec)+". Ahora revisá tu abecedario.","bien");
+    var lista = el("div",{class:"revision"});
+    ["Lo hice sin levantar el lápiz en cada renglón.","Puse los puntos de la i y la j.","Puse la tilde de la ñ.","Puse los palitos de la t, la q y la x.","Están todas las letras, de la a a la z."].forEach(function(txt){
+      var b = el("button",{class:"chequeo",type:"button","aria-pressed":"false",text:txt});
+      b.addEventListener("click", function(){ b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed")!=="true")); });
+      lista.appendChild(b);
+    });
+    panel.appendChild(lista);
+    panel.appendChild(el("div",{class:"acciones"},[boton("Otra vez, más rápido","prim grande",empezar)]));
+    mostrarRecord();
+  }
+  function formato(ms){ var s = Math.floor(ms/1000); return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); }
+  function leerRecord(){ try { var v = parseInt(localStorage.getItem("lye_desafio_abc"),10); return isNaN(v) ? null : v; } catch(e){ return null; } }
+  function guardarRecord(ms){ try { localStorage.setItem("lye_desafio_abc", String(ms)); } catch(e){} }
+  function mostrarRecord(){ var r = leerRecord(), old = p.mesa.querySelector(".record"); if(old) old.remove(); if(r) p.mesa.appendChild(el("p",{class:"record",text:"Mejor tiempo en esta compu: "+formato(r)})); }
 }
 
 /* ================= inicio ================= */
@@ -835,16 +1537,24 @@ var JUEGOS = [
     {f:function(){ bolsitas(); }, t:"Bolsitas de letras", q:"Cada dibujo a la bolsita de su primera letra.", src:"Correspondencia", n:[1,2], ico:"mate"},
     {f:function(){ letraIntrusa(); }, t:"La letra intrusa", q:"Una de las dos letras no va con el dibujo.", src:"Correspondencia", n:[1,2], letra:"e"}
   ]},
+  {hilo:"Trazado", items:[
+    {f:trazado, t:"¿Cómo se hace la letra?", q:"Dónde se empieza y cómo sigue, en imprenta y en cursiva, con las letras de cada nivel.", src:"Trazado", fuente:"¡Vamos a leer y a escribir!", n:[1,2,3], letra:"✎"},
+    {f:desafio, t:"Desafío: el abecedario enlazado", q:"Todo el abecedario en cursiva sin levantar el lápiz. ¿Te animás?", src:"Trazado", fuente:"¡Vamos a leer y a escribir!", n:[3], letra:"abc"}
+  ]},
   {hilo:"Escribo", items:[
     {f:crucipalabras, t:"Crucipalabras", q:"Una letra en cada casillero, ni una más ni una menos.", src:"Escritura de palabras", n:[1,2,3], ico:"flor"},
-    {f:transforman, t:"Palabras que se transforman", q:"Cambiá una letra y la palabra cambia.", src:"Escritura de palabras", n:[1,2], ico:"gato"}
+    {f:transforman, t:"Palabras que se transforman", q:"Cambiá una letra y la palabra cambia.", src:"Escritura de palabras", n:[1,2], ico:"gato"},
+    {f:engordoFrase, t:"Engordo la frase", q:"¿Cómo es? Agregamos una palabra que describe.", src:"Frases", fuente:"Yo amo aprender 1.º y 2.º", n:[2], ico:"bota"},
+    {f:ordeno, t:"Ordeno la oración", q:"Tocamos las palabras en orden para que la oración tenga sentido.", src:"Oraciones", fuente:"Yo amo aprender 2.º", n:[2,3], letra:"1 2 3"},
+    {f:engordamos, t:"Engordamos la oración", q:"¿Quién? ¿Qué hace? ¿Cómo es? ¿Dónde? Armamos la oración y la engordamos.", src:"Oraciones", fuente:"Yo amo aprender 2.º", n:[3], ico:"dragón"}
   ]},
   {hilo:"Leo", items:[
+    {f:unoMuchos, t:"¿Uno o muchos?", q:"¿El oso o los osos? Leemos la frase que va con el dibujo.", src:"Lectura de frases", fuente:"Yo amo aprender 1.º", n:[1], ico:"oso"},
     {f:ventanita, t:"La ventanita", q:"Corré la tapa, decí los sonidos y descubrí la palabra.", src:"Lectura de palabras", n:[1,2,3], letra:"s"},
     {f:parecidas, t:"Parecidas, no iguales", q:"Tres palabras parecidas. ¿Cuál es la del dibujo?", src:"Lectura de palabras", n:[1,2,3], ico:"plato"},
     {f:incorrecta, t:"La incorrecta", q:"Todas del mismo grupo, menos una.", src:"Lectura de palabras", n:[2,3], letra:"✗"},
     {f:verduleria, t:"La verdulería", q:"Leé la lista de compras y elegí lo que dice.", src:"Lectura de palabras", n:[2,3], ico:"zanahoria"},
-    {f:junto, t:"¡Junto lo que va junto!", q:"Uní las partes para armar oraciones.", src:"Lectura de palabras", n:[2,3], letra:"Aa."}
+    {f:junto, t:"¡Junto lo que va junto!", q:"¿Quién? ¿Qué hace? Uní las partes para armar oraciones.", src:"Lectura de oraciones", n:[2,3], letra:"Aa."}
   ]}
 ];
 function pintarNiveles(){
@@ -865,7 +1575,7 @@ function inicio(){
     var g = el("div",{class:"juegos"});
     its.forEach(function(j){
       var ico = el("div",{class:"ico"}); if(j.ico) ico.appendChild(el("img",{src:IMG[j.ico],alt:""})); else ico.textContent = j.letra;
-      var b = el("button",{class:"juego",type:"button"},[ico, el("div",{style:"min-width:0"},[el("h3",{text:j.t}), el("p",{text:j.q}), el("span",{class:"src",text:"+Alfabetización · "+j.src})])]);
+      var b = el("button",{class:"juego",type:"button"},[ico, el("div",{style:"min-width:0"},[el("h3",{text:j.t}), el("p",{text:j.q}), el("span",{class:"src",text:(j.fuente||"+Alfabetización")+" · "+j.src})])]);
       b.addEventListener("click", function(){ j.f(); });
       g.appendChild(b);
     });
